@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3b650c99.css",
-    "main.js": "/portfolio/static/js/main.d367da17.js",
-    "static/js/787.25eaef86.chunk.js": "/portfolio/static/js/787.25eaef86.chunk.js",
-    "static/media/FiraCode-VariableFont_wght.ttf": "/portfolio/static/media/FiraCode-VariableFont_wght.4938e54ab2f06530a084.ttf",
-    "static/media/Image.webp": "/portfolio/static/media/Image.079d2fbf4a29de7f7f9c.webp",
-    "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.43069e0227a325dec22dbe24c0efe60f.svg",
-    "index.html": "/portfolio/index.html",
-    "main.3b650c99.css.map": "/portfolio/static/css/main.3b650c99.css.map",
-    "main.d367da17.js.map": "/portfolio/static/js/main.d367da17.js.map",
-    "787.25eaef86.chunk.js.map": "/portfolio/static/js/787.25eaef86.chunk.js.map"
+    "main.css": "/dimonhacker.github.io/static/css/main.a763dcf8.css",
+    "main.js": "/dimonhacker.github.io/static/js/main.7acbb0d6.js",
+    "static/js/787.25eaef86.chunk.js": "/dimonhacker.github.io/static/js/787.25eaef86.chunk.js",
+    "static/media/FiraCode-VariableFont_wght.ttf": "/dimonhacker.github.io/static/media/FiraCode-VariableFont_wght.4938e54ab2f06530a084.ttf",
+    "static/media/Image.webp": "/dimonhacker.github.io/static/media/Image.079d2fbf4a29de7f7f9c.webp",
+    "static/media/icons-sprite.svg": "/dimonhacker.github.io/static/media/icons-sprite.43069e0227a325dec22dbe24c0efe60f.svg",
+    "index.html": "/dimonhacker.github.io/index.html",
+    "main.a763dcf8.css.map": "/dimonhacker.github.io/static/css/main.a763dcf8.css.map",
+    "main.7acbb0d6.js.map": "/dimonhacker.github.io/static/js/main.7acbb0d6.js.map",
+    "787.25eaef86.chunk.js.map": "/dimonhacker.github.io/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b650c99.css",
-    "static/js/main.d367da17.js"
+    "static/css/main.a763dcf8.css",
+    "static/js/main.7acbb0d6.js"
   ]
 }
