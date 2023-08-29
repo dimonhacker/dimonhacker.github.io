@@ -12,6 +12,7 @@ export const Main = () => {
                     <P>He crafts responsive websites where technologies meet creativity</P>
                     <button>Contact me</button>
                     </div>
+
                     <Photo></Photo>
                 </FlexWrapper>
 
