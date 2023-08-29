@@ -4,11 +4,12 @@ import {Skill} from "./skill/Skill";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Icon} from "../../../components/icon/Icon";
+import {ColorSpan} from "../../../components/ColorSpan";
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>#skills</SectionTitle>
+            <SectionTitle><ColorSpan>#</ColorSpan>skills</SectionTitle>
 
             <FlexWrapper justify={"flex-end"} >
                 <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 type SkillPropsType = {
-    title: String,
-    description: String
+    title: string,
+    description: string
 }
 
 export const Skill = (props:SkillPropsType) => {
@@ -20,8 +20,18 @@ const StyledSkill = styled.div`
     width: 178px;
 `
 const StyledSTitle = styled.h2`
-    border: 1px white;
+  color: white;
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 `
 const SkillText = styled.p`
-  border: 1px white;
+  color: #ABB2BF;
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `

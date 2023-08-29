@@ -3,10 +3,10 @@ import {Photo} from "./Photo";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
+import {ColorSpan} from "../../../components/ColorSpan";
 
 export const Main = () => {
     return (
-        <div>
             <FlexWrapper align={"center"} justify={"space-around"}>
                 <div>
                     <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <ColorSpan>front-end
@@ -17,13 +17,10 @@ export const Main = () => {
                 <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
                 <div>
                     <Photo></Photo>
-                    <P>Currently working on <B>Portfolio</B></P>
+                    <FlexWrapper><Rect/><P>Currently working on <B>Portfolio</B></P></FlexWrapper>
                 </div>
                 <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
             </FlexWrapper>
-
-
-        </div>
     );
 };
 
@@ -35,7 +32,7 @@ const H1 = styled.h1`
   font-weight: 600;
   line-height: normal;
 `
-const P = styled.p`
+const P = styled.span`
   color: #ABB2BF;
   font-family: Fira Code;
   font-size: 16px;
@@ -43,14 +40,13 @@ const P = styled.p`
   font-weight: 400;
   line-height: 25px; /* 156.25% */
 `
-const ColorSpan = styled.span`
-  color: #C778DD;
-  font-family: Fira Code;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-`
 const B = styled.b`
   color: white;
+`
+const Rect = styled.div`
+  margin-top: 4px;
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  background: #C778DD;
 `
