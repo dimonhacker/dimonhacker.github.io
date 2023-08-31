@@ -27,5 +27,10 @@ const StyledMenu = styled.nav`
   a{
     color: gray;
     text-decoration: none;
+    font-family: Fira Code;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 `

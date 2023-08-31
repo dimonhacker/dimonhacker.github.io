@@ -11,22 +11,22 @@ export const Projects = () => {
         <StyledSProjects>
 
             <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
-            <FlexWrapper justify={"space-between"} align={"start"}>
+            <FlexWrapper wrap="wrap">
                 <StyledDiv>
                     <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"live<~>"} cashed={""}></ProjectItem>
+                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
                 </StyledDiv>
                 <StyledDiv>
                     <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"live<~>"} cashed={""}></ProjectItem>
+                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
                 </StyledDiv>
                 <StyledDiv>
                     <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"live<~>"} cashed={""}></ProjectItem>
+                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
                 </StyledDiv>
                 <StyledDiv>
                     <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"live<~>"} cashed={""}></ProjectItem>
+                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
                 </StyledDiv>
             </FlexWrapper>
         </StyledSProjects>
@@ -37,7 +37,6 @@ const StyledSProjects = styled.section`
   min-height: 100vh;
   border: white;
   padding: 20px;
-  position: relative;
 `
 const StyledDiv = styled.div`
   margin: 20px;

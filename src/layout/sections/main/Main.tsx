@@ -7,28 +7,29 @@ import {ColorSpan} from "../../../components/ColorSpan";
 
 export const Main = () => {
     return (
-        <div >
-            <FlexWrapper align={"center"} justify={"space-around"}>
-                <StyledDiv>
-                    <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <ColorSpan>front-end
-                        developer</ColorSpan></H1>
-                    <P>He crafts responsive websites where technologies meet creativity</P>
+        <FlexWrapper justify={"center"} align={"center"}>
+            <FlexWrapper direction={"column"}>
+                <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
+                    developer</ColorSpan></div></H1>
+                <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
+                <P>
                     <button>Contact me</button>
-                </StyledDiv>
-                <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                <div>
-                    <Photo></Photo>
-                    <FlexWrapper><Rect/><P>Currently working on <B>Portfolio</B></P></FlexWrapper>
-                </div>
-                <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                </P>
             </FlexWrapper>
-            <StyledCenterBox >
-            With great power comes great electricity bill
-            </StyledCenterBox>
-            <StyledCenterBox >
-                - Dr. Who
-            </StyledCenterBox>
-        </div>
+            <FlexWrapper direction={"column"}>
+                <LogoEl>
+                    <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                </LogoEl>
+                <FlexWrapper direction={"column"}>
+                    <Photo/>
+                    <FlexWrapper>
+                        <Rect/>
+                        <P>Currently working on <B>Portfolio</B></P>
+                    </FlexWrapper>
+                    <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                </FlexWrapper>
+            </FlexWrapper>
+        </FlexWrapper>
     );
 };
 
@@ -47,7 +48,6 @@ const P = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 25px; /* 156.25% */
-  width: 30em;
 `
 const B = styled.b`
   color: white;
@@ -59,15 +59,15 @@ const Rect = styled.div`
   height: 16px;
   background: #C778DD;
 `
-const StyledDiv = styled.div`
-  width: 35em;
+const LogoEl = styled.div`
+    position: relative;
 `
 
 
 const StyledCenterBox = styled.div`
   display: flex;
   justify-content: center;
-  width: 712px;
+  max-width: 712px;
   margin: 0 auto;
   padding: 32px;
   align-items: flex-start;

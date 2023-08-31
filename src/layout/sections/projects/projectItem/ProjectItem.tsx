@@ -26,18 +26,14 @@ export const ProjectItem = (props: ProjectItemPropsType) => {
     );
 };
 const StyledImg = styled.img`
-  width: 330px;
-  height: 200px;
   border: 1px solid #ABB2BF;
 `
 const StyledSkills = styled.div`
-  width: calc(330px - 2 * 8px);
   border: 1px solid #ABB2BF;
   display: flex;
   padding: 8px;
 `
 const StyledDescr= styled.div`
-  width: calc(330px - 2 * 16px);
   border: 1px solid #ABB2BF;
   display: flex;
   flex-direction: column;
@@ -53,7 +49,7 @@ const StyledSpan = styled.span`
   padding: 8px;
 `
 const ButtonDiv = styled.div`
-  width: 77px;
+  max-width: 77px;
   height: 21px;
   border: 1px solid #ABB2BF;
   padding: 8px 16px 8px 16px;

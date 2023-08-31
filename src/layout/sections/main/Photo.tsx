@@ -12,7 +12,7 @@ export const Photo = () => {
 };
 
 const AvatarImage = styled.img`
-  width: 457px;
+  max-width: 457px;
   height: 386px;
   flex-shrink: 0;
 `
