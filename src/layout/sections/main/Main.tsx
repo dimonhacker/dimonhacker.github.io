@@ -7,26 +7,34 @@ import {ColorSpan} from "../../../components/ColorSpan";
 
 export const Main = () => {
     return (
-        <FlexWrapper justify={"center"} align={"center"}>
-            <FlexWrapper direction={"column"}>
-                <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
-                    developer</ColorSpan></div></H1>
-                <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
-                <P>
-                    <button>Contact me</button>
-                </P>
-            </FlexWrapper>
-            <FlexWrapper direction={"column"}>
-                <LogoEl>
-                    <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                </LogoEl>
+        <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
+            <FlexWrapper align={"center"}>
                 <FlexWrapper direction={"column"}>
-                    <Photo/>
-                    <FlexWrapper>
-                        <Rect/>
-                        <P>Currently working on <B>Portfolio</B></P>
+                    <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
+                        developer</ColorSpan></div></H1>
+                    <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
+                    <P>
+                        <button>Contact me</button>
+                    </P>
+                </FlexWrapper>
+                <FlexWrapper direction={"column"}>
+                    <LogoEl>
+                        <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                    </LogoEl>
+                    <FlexWrapper direction={"column"}>
+                        <Photo/>
+                        <FlexWrapper>
+                            <Rect/>
+                            <P>Currently working on <B>Portfolio</B></P>
+                        </FlexWrapper>
+                        <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
                     </FlexWrapper>
-                    <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                </FlexWrapper>
+            </FlexWrapper>
+            <FlexWrapper direction={"column"} align={"flex-end"}>
+                <StyledBox>With great power comes great electricity bill</StyledBox>
+                <FlexWrapper>
+                    <StyledBox>Dr. Who</StyledBox>
                 </FlexWrapper>
             </FlexWrapper>
         </FlexWrapper>
@@ -64,13 +72,11 @@ const LogoEl = styled.div`
 `
 
 
-const StyledCenterBox = styled.div`
-  display: flex;
-  justify-content: center;
+const StyledBox = styled.div`
+  color: #FFF;
   max-width: 712px;
   margin: 0 auto;
   padding: 32px;
-  align-items: flex-start;
   gap: 10px;
   border: 2px solid gray;
 `
