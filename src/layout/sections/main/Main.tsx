@@ -32,8 +32,12 @@ export const Main = () => {
                 </FlexWrapper>
             </FlexWrapper>
             <FlexWrapper direction={"column"} align={"flex-end"}>
-                <StyledBox>With great power comes great electricity bill</StyledBox>
                 <FlexWrapper>
+                <AboluteElStart> <Icon iconId={"quotes"} width="26" height="21" viewBox="0 0 26 21"/></AboluteElStart>
+                <StyledBox>With great power comes great electricity bill</StyledBox>
+                </FlexWrapper>
+                <FlexWrapper>
+                    <AboluteElEnd> <Icon iconId={"quotes"} width="26" height="21" viewBox="0 0 26 21"/></AboluteElEnd>
                     <StyledBox>Dr. Who</StyledBox>
                 </FlexWrapper>
             </FlexWrapper>
@@ -79,4 +83,27 @@ const StyledBox = styled.div`
   padding: 32px;
   gap: 10px;
   border: 2px solid gray;
+  font-family: Fira Code;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`
+const AboluteElEnd = styled.div`
+  color: #ABB2BF;
+  position: relative;
+  left: 10em;
+  top: -1em;
+  padding: 5px;
+  height: 21px;
+  background: #282C33;
+`
+const AboluteElStart = styled.div`
+  color: #ABB2BF;
+  position: relative;
+  left: 3em;
+  top: -1em;
+  padding: 5px;
+  height: 21px;
+  background: #282C33;
 `

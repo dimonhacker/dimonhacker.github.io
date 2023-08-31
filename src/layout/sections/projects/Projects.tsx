@@ -8,32 +8,35 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const Projects = () => {
     return (
-        <StyledSProjects>
+        <FlexWrapper direction={"column"} align={"center"}>
+            <StyledSProjects>
+                <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
+                <FlexWrapper>
+                    <FlexWrapper wrap="wrap">
+                        <StyledDiv>
+                            <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
+                                         description={"Minecraft servers hosting "} live={"Live<~>"}
+                                         cashed={""}></ProjectItem>
+                        </StyledDiv>
+                        <StyledDiv>
+                            <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
+                                         description={"Minecraft servers hosting "} live={"Live<~>"}
+                                         cashed={""}></ProjectItem>
+                        </StyledDiv>
+                        <StyledDiv>
+                            <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
+                                         description={"Minecraft servers hosting "} live={"Live<~>"}
+                                         cashed={""}></ProjectItem>
+                        </StyledDiv>
+                    </FlexWrapper>
+                </FlexWrapper>
 
-            <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
-            <FlexWrapper wrap="wrap">
-                <StyledDiv>
-                    <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
-                </StyledDiv>
-                <StyledDiv>
-                    <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
-                </StyledDiv>
-                <StyledDiv>
-                    <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
-                </StyledDiv>
-                <StyledDiv>
-                    <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                 description={"Minecraft servers hosting "} live={"Live<~>"} cashed={""}></ProjectItem>
-                </StyledDiv>
-            </FlexWrapper>
-        </StyledSProjects>
+            </StyledSProjects>
+        </FlexWrapper>
     );
 };
 const StyledSProjects = styled.section`
-  background-color: #606060;
+  background-color: #282C33;
   min-height: 100vh;
   border: white;
   padding: 20px;
