@@ -8,7 +8,7 @@ import {ColorSpan} from "../../../components/ColorSpan";
 export const Main = () => {
     return (
         <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
-            <FlexWrapper align={"center"}>
+            <FlexWrapper align={"center"} justify={"center"}>
                 <FlexWrapper direction={"column"}>
                     <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
                         developer</ColorSpan></div></H1>
@@ -27,7 +27,9 @@ export const Main = () => {
                             <Rect/>
                             <P>Currently working on <B>Portfolio</B></P>
                         </FlexWrapper>
+                        <DotsEl>
                         <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                        </DotsEl>
                     </FlexWrapper>
                 </FlexWrapper>
             </FlexWrapper>
@@ -73,8 +75,16 @@ const Rect = styled.div`
 `
 const LogoEl = styled.div`
     position: relative;
+  top: 250px;
+  right:10px;
+  z-index: -1;
 `
-
+const DotsEl = styled.div`
+    position: relative;
+  bottom: 175px;
+  left:360px;
+  z-index: 1;
+`
 
 const StyledBox = styled.div`
   color: #FFF;
