@@ -8,7 +8,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const Projects = () => {
     return (
-        <FlexWrapper direction={"column"} align={"center"}>
+        <FlexWrapper  direction={"column"} align={"center"} id={"works"}>
             <StyledSProjects>
                 <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
                 <FlexWrapper>

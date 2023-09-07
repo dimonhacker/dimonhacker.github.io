@@ -3,12 +3,14 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
+
+const items = ["#home", "#works","#about-me","#contacts"]
 export const Header = () => {
     return (
             <StyledHeader>
                 <FlexWrapper justify={"space-around"}>
                     <StyledSpan><Logo/> Elias</StyledSpan>
-                <Menu></Menu>
+                <Menu menuItems={items}></Menu>
                 </FlexWrapper>
             </StyledHeader>
     );

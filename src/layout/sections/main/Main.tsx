@@ -7,7 +7,7 @@ import {ColorSpan} from "../../../components/ColorSpan";
 
 export const Main = () => {
     return (
-        <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
+        <FlexWrapper direction={"column"} justify={"center"} align={"center"} id={"home"}>
             <FlexWrapper align={"center"} justify={"center"}>
                 <FlexWrapper direction={"column"}>
                     <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
