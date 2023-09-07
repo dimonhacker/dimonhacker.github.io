@@ -5,11 +5,13 @@ import {ColorSpan} from "../../../components/ColorSpan";
 import {SectionTitle} from "../../../components/SectionTitle";
 import ChertProj from '../../../../src/assets/images/Rectangle 22.png'
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {StyledSection2} from "../../../components/StyledSection2";
 
 export const Projects = () => {
     return (
-        <FlexWrapper  direction={"column"} align={"center"} id={"works"}>
-            <StyledSProjects>
+
+        <StyledSection2 id={"works"}>
+            <FlexWrapper direction={"column"} align={"center"} >
                 <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
                 <FlexWrapper>
                     <FlexWrapper wrap="wrap">
@@ -30,17 +32,12 @@ export const Projects = () => {
                         </StyledDiv>
                     </FlexWrapper>
                 </FlexWrapper>
+            </FlexWrapper>
+        </StyledSection2>
 
-            </StyledSProjects>
-        </FlexWrapper>
     );
 };
-const StyledSProjects = styled.section`
-  background-color: #282C33;
-  min-height: 100vh;
-  border: white;
-  padding: 20px;
-`
+
 const StyledDiv = styled.div`
   margin: 20px;
 `

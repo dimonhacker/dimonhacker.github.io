@@ -4,48 +4,54 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 import {ColorSpan} from "../../../components/ColorSpan";
+import {StyledSection1} from "../../../components/StyledSection1";
 
 export const Main = () => {
     return (
-        <FlexWrapper direction={"column"} justify={"center"} align={"center"} id={"home"}>
-            <FlexWrapper align={"center"} justify={"center"}>
-                <FlexWrapper direction={"column"}>
-                    <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
-                        developer</ColorSpan></div></H1>
-                    <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
-                    <P>
-                        <button>Contact me</button>
-                    </P>
-                </FlexWrapper>
-                <FlexWrapper direction={"column"}>
-                    <LogoEl>
-                        <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                    </LogoEl>
+        <StyledSection1>
+            <FlexWrapper direction={"column"} justify={"center"} align={"center"} id={"home"}>
+                <FlexWrapper align={"center"} justify={"center"}>
                     <FlexWrapper direction={"column"}>
-                        <Photo/>
-                        <FlexWrapper>
-                            <Rect/>
-                            <P>Currently working on <B>Portfolio</B></P>
+                        <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
+                            developer</ColorSpan></div></H1>
+                        <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
+                        <P>
+                            <button>Contact me</button>
+                        </P>
+                    </FlexWrapper>
+                    <FlexWrapper direction={"column"}>
+                        <LogoEl>
+                            <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                        </LogoEl>
+                        <FlexWrapper direction={"column"}>
+                            <Photo/>
+                            <FlexWrapper>
+                                <Rect/>
+                                <P>Currently working on <B>Portfolio</B></P>
+                            </FlexWrapper>
+                            <DotsEl>
+                                <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                            </DotsEl>
                         </FlexWrapper>
-                        <DotsEl>
-                        <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                        </DotsEl>
+                    </FlexWrapper>
+                </FlexWrapper>
+                <FlexWrapper direction={"column"} align={"flex-end"}>
+                    <FlexWrapper>
+                        <AboluteElStart> <Icon iconId={"quotes"} width="26" height="21"
+                                               viewBox="0 0 26 21"/></AboluteElStart>
+                        <StyledBox>With great power comes great electricity bill</StyledBox>
+                    </FlexWrapper>
+                    <FlexWrapper>
+                        <AboluteElEnd> <Icon iconId={"quotes"} width="26" height="21"
+                                             viewBox="0 0 26 21"/></AboluteElEnd>
+                        <StyledBox>Dr. Who</StyledBox>
                     </FlexWrapper>
                 </FlexWrapper>
             </FlexWrapper>
-            <FlexWrapper direction={"column"} align={"flex-end"}>
-                <FlexWrapper>
-                <AboluteElStart> <Icon iconId={"quotes"} width="26" height="21" viewBox="0 0 26 21"/></AboluteElStart>
-                <StyledBox>With great power comes great electricity bill</StyledBox>
-                </FlexWrapper>
-                <FlexWrapper>
-                    <AboluteElEnd> <Icon iconId={"quotes"} width="26" height="21" viewBox="0 0 26 21"/></AboluteElEnd>
-                    <StyledBox>Dr. Who</StyledBox>
-                </FlexWrapper>
-            </FlexWrapper>
-        </FlexWrapper>
+        </StyledSection1>
     );
 };
+
 
 const H1 = styled.h1`
   color: #FFF;
@@ -74,15 +80,15 @@ const Rect = styled.div`
   background: #C778DD;
 `
 const LogoEl = styled.div`
-    position: relative;
+  position: relative;
   top: 250px;
-  right:10px;
+  right: 10px;
   z-index: -1;
 `
 const DotsEl = styled.div`
-    position: relative;
+  position: relative;
   bottom: 175px;
-  left:360px;
+  left: 360px;
   z-index: 1;
 `
 

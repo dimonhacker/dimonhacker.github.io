@@ -5,26 +5,32 @@ import {ColorSpan} from "../../../components/ColorSpan";
 import styled from "styled-components";
 import {Logo2} from "../../../components/Logo2";
 import LeftImg from "../../../assets/images/Rectangle-22.webp"
+import {StyledSection2} from "../../../components/StyledSection2";
 
 export const About = () => {
     return (
-        <FlexWrapper id={"about-me"} justify={"center"}>
-            <FlexWrapper maxWidth={"515px;"}>
-                <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
-                <FlexWrapper direction={"column"} justify={"left"} >
-                    <P>Hello, i’m Elias!</P>
-                    <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive websites
-                        from scratch and raise them into modern user-friendly web experiences. </P>
-                    <P>Transforming my creativity and knowledge into a websites has been my passion for over a year. I
-                        have been helping various clients to establish their presence online. I always strive to learn
-                        about the newest technologies and frameworks.</P>
+        <StyledSection2 id={"about-me"}>
+            <FlexWrapper justify={"center"}>
+                <FlexWrapper maxWidth={"515px;"}>
+                    <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
+                    <FlexWrapper direction={"column"} justify={"left"}>
+                        <P>Hello, i’m Elias!</P>
+                        <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive
+                            websites
+                            from scratch and raise them into modern user-friendly web experiences. </P>
+                        <P>Transforming my creativity and knowledge into a websites has been my passion for over a year.
+                            I
+                            have been helping various clients to establish their presence online. I always strive to
+                            learn
+                            about the newest technologies and frameworks.</P>
+                    </FlexWrapper>
+                    <ReadMore href={"#"}>Read more -&gt;</ReadMore>
                 </FlexWrapper>
-                <ReadMore href={"#"}>Read more -&gt;</ReadMore>
+                <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"}>
+                    <a href={"#"}><Logo2/></a>
+                </FlexWrapper>
             </FlexWrapper>
-            <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"}>
-                <a href={"#"}><Logo2/></a>
-            </FlexWrapper>
-        </FlexWrapper>
+        </StyledSection2>
     );
 };
 

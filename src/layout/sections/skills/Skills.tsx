@@ -1,14 +1,14 @@
 import React from 'react';
-import styled from "styled-components";
 import {Skill} from "./skill/Skill";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Icon} from "../../../components/icon/Icon";
 import {ColorSpan} from "../../../components/ColorSpan";
+import {StyledSection1} from "../../../components/StyledSection1";
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <StyledSection1>
             <FlexWrapper justify={"center"}>
                 <FlexWrapper direction={"column"} justify={"flex-start"}>
                     <SectionTitle><ColorSpan>#</ColorSpan>skills</SectionTitle>
@@ -36,11 +36,6 @@ export const Skills = () => {
                     </div>
                 </FlexWrapper>
             </FlexWrapper>
-        </StyledSkills>
+        </StyledSection1>
     );
 };
-const StyledSkills = styled.section`
-  background-color: #4d4d4d;
-  min-height: 100vh;
-  border: white;
-`
