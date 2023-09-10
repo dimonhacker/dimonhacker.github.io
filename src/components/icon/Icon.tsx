@@ -18,5 +18,4 @@ export const Icon = (props:IconPropsType) => {
 
 const SVG = styled.svg`
   padding-left: 10px;
-  max-width: 100vw;
 `
