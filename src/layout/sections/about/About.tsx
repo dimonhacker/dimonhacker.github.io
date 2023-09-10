@@ -12,7 +12,7 @@ export const About = () => {
     return (
         <StyledSection2 id={"about-me"}  >
             <FlexWrapper justify={"center"} >
-                <FlexWrapper  align={"center"}>
+                <FlexWrapper  align={"center"} maxWidth={"515px"}>
                     <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
                     <Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>
                     <FlexWrapper direction={"column"} justify={"left"}>
