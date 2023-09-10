@@ -8,7 +8,7 @@ const items = ["#home", "#works","#about-me","#contacts"]
 export const Header = () => {
     return (
             <StyledHeader>
-                <FlexWrapper justify={"space-around"}>
+                <FlexWrapper justify={"space-between"} >
                     <StyledSpan><Logo/> Elias</StyledSpan>
                 <Menu menuItems={items}></Menu>
                 </FlexWrapper>
@@ -18,6 +18,8 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   padding: 32px 0px 8px 0px;
+  max-width: 1024px;
+  margin: 0 auto;
 `
 const StyledSpan = styled.p`
 color: white;
