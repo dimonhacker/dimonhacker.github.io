@@ -12,9 +12,11 @@ export const About = () => {
     return (
         <StyledSection2 id={"about-me"}  >
             <FlexWrapper justify={"space-between"} >
-                <FlexWrapper  align={"center"} maxWidth={"515px"}>
+                <FlexWrapper  maxWidth={"515px"}>
+                    <FlexWrapper align={"center"} wrap={"no-wrap"}>
                     <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
                     <Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>
+                    </FlexWrapper>
                     <FlexWrapper direction={"column"} justify={"left"}>
                         <P>Hello, i’m Elias!</P>
                         <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive

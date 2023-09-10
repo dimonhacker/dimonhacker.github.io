@@ -15,8 +15,8 @@ export const Projects = () => {
 
         <StyledSection2 id={"works"}>
             <FlexWrapper direction={"column"} >
-                <FlexWrapper justify={"space-between"} align={"center"}>
-                    <FlexWrapper gap={"16px"} align={"center"}><SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle><Icon iconId={"line"} width="511" height="2" viewBox="0 0 511 2"/></FlexWrapper>
+                <FlexWrapper justify={"space-between"} align={"center"} >
+                    <FlexWrapper gap={"16px"} align={"center"} wrap={"no-wrap"}><SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle><Icon iconId={"line"} width="511" height="2" viewBox="0 0 511 2"/></FlexWrapper>
                     <A href={"#"}><Span>View all ~&gt;</Span></A>
                 </FlexWrapper>
                 <FlexWrapper>

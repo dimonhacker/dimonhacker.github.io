@@ -6,7 +6,6 @@ import {Projects} from "./layout/sections/projects/Projects";
 import {About} from "./layout/sections/about/About";
 import {Contacts} from "./layout/sections/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
-import {Citation} from "./layout/sections/projects/citation/Citation";
 
 
 function App() {

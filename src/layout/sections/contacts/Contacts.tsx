@@ -10,7 +10,7 @@ export const Contacts = () => {
     return (
         <StyledSection1 id={"contacts"} >
             <FlexWrapper direction={"column"}>
-            <FlexWrapper  align={"center"}>
+            <FlexWrapper  align={"center"} wrap={"no-wrap"}>
                 <SectionTitle><ColorSpan>#</ColorSpan>contacts</SectionTitle><Icon iconId={"line"}  width="127" height="2" viewBox="0 0 127 2"/>
             </FlexWrapper>
                 <FlexWrapper justify={"space-between"}>

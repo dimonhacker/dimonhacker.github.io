@@ -12,9 +12,9 @@ export const Main = () => {
         <StyledSection1  id={"home"}>
             <FlexWrapper gap={"120px"} direction={"column"} alignItems={"center"} align={"space-between"}>
                 <FlexWrapper align={"center"} >
-                    <FlexWrapper direction={"column"}>
-                        <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
-                            developer</ColorSpan></div></H1>
+                    <FlexWrapper direction={"column"} maxWidth={"537px;"}>
+                        <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <ColorSpan>front-end
+                            developer</ColorSpan></H1>
                         <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
                         <P>
                             <button>Contact me</button>

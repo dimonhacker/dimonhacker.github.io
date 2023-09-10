@@ -11,7 +11,7 @@ export const Skills = () => {
         <StyledSection1>
             <FlexWrapper >
                 <FlexWrapper direction={"column"} >
-                    <FlexWrapper justify={"start"} align={"center"}>
+                    <FlexWrapper justify={"start"} align={"center"} wrap={"no-wrap"}>
                         <SectionTitle><ColorSpan>#</ColorSpan>skills</SectionTitle>
                         <Icon iconId={"line"} width="239" height="2" viewBox="0 0 239 2"/>
                     </FlexWrapper>

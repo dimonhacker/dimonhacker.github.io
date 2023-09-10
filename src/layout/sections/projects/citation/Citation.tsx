@@ -6,7 +6,7 @@ import styled from "styled-components";
 export const Citation = () => {
     return (
 
-        <FlexWrapper direction={"column"} align={"end"}>
+        <FlexWrapper direction={"column"} align={"flex-end"}>
             <FlexWrapper>
                 <AboluteElStart> <Icon iconId={"quotes"} width="26" height="21"
                                        viewBox="0 0 26 21"/></AboluteElStart>
@@ -15,7 +15,7 @@ export const Citation = () => {
             <FlexWrapper >
                 <AboluteElEnd> <Icon iconId={"quotes"} width="26" height="21"
                                      viewBox="0 0 26 21"/></AboluteElEnd>
-                <StyledBox2>Dr. Who</StyledBox2>
+                <StyledBox2>- Dr. Who</StyledBox2>
             </FlexWrapper>
         </FlexWrapper>
     );
@@ -24,7 +24,7 @@ export const Citation = () => {
 
 const StyledBox = styled.div`
   color: #FFF;
-  max-width: 712px;
+  max-width: 515px;
   margin: 0 auto;
   padding: 32px;
   gap: 10px;
@@ -37,7 +37,7 @@ const StyledBox = styled.div`
 `
 const StyledBox2= styled.div`
   color: #FFF;
-  max-width: 712px;
+  max-width: 515px;
   margin: 0 auto;
   padding: 32px;
   gap: 10px;
