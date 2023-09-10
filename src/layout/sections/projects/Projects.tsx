@@ -4,6 +4,8 @@ import {ProjectItem} from "./projectItem/ProjectItem";
 import {ColorSpan} from "../../../components/ColorSpan";
 import {SectionTitle} from "../../../components/SectionTitle";
 import ChertProj from '../../../../src/assets/images/Rectangle 22.png'
+import ProtectX from '../../../../src/assets/images/Rectangle 23.png'
+import Kahoot from '../../../../src/assets/images/Rectangle 24.png'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {StyledSection2} from "../../../components/StyledSection2";
 import {Icon} from "../../../components/icon/Icon";
@@ -22,11 +24,11 @@ export const Projects = () => {
                             <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
                                          description={"Minecraft servers hosting "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
-                            <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                         description={"Minecraft servers hosting "} live={"Live<~>"}
+                            <ProjectItem imgSrc={ProtectX} skills={"React Express Discord.js Node.js HTML CSS Python Flask"} title={"ProtextX"}
+                                         description={"Discord anti-crash bot "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
-                            <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
-                                         description={"Minecraft servers hosting "} live={"Live<~>"}
+                            <ProjectItem imgSrc={Kahoot} skills={"CSS Express Node.js"} title={"Kahoot Answers Viewer"}
+                                         description={"Get answers to your kahoot quiz "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
                     </FlexWrapper>
                 </FlexWrapper>
