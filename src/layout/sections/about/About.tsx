@@ -6,13 +6,15 @@ import styled from "styled-components";
 import {Logo2} from "../../../components/Logo2";
 import LeftImg from "../../../assets/images/Rectangle-22.webp"
 import {StyledSection2} from "../../../components/StyledSection2";
+import {Icon} from "../../../components/icon/Icon";
 
 export const About = () => {
     return (
-        <StyledSection2 id={"about-me"}>
-            <FlexWrapper justify={"center"}>
-                <FlexWrapper maxWidth={"515px;"}>
+        <StyledSection2 id={"about-me"}  >
+            <FlexWrapper justify={"center"} >
+                <FlexWrapper  align={"center"}>
                     <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
+                    <Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>
                     <FlexWrapper direction={"column"} justify={"left"}>
                         <P>Hello, i’m Elias!</P>
                         <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive

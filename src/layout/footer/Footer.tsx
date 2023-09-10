@@ -4,11 +4,13 @@ import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
+import {StyledSection2} from "../../components/StyledSection2";
 
 export const Footer = () => {
     return (
+        <StyledFooter>
         <FlexWrapper justify={"space-between"} direction={"column"} gap={"48px"}>
-            <FlexWrapper justify={"space-around"}>
+            <FlexWrapper justify={"space-between"}>
                 <FlexWrapper direction={"column"}>
                     <FlexWrapper gap={"24px"} alignItems={"center"}>
                         <StyledSpan><Logo/> Elias</StyledSpan>
@@ -27,9 +29,16 @@ export const Footer = () => {
             </FlexWrapper>
             <CopyrightMail>© Copyright 2022. Made by Elias</CopyrightMail>
         </FlexWrapper>
+        </StyledFooter>
     );
 };
 
+const StyledFooter = styled.div`
+  background-color: #282C33;
+  border: white;
+  max-width: 1024px;
+  margin: 0 auto;
+`
 const StyledSpan = styled.p`
   color: white;
   font-family: Fira Code;

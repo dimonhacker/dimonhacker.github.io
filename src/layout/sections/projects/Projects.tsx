@@ -6,30 +6,28 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import ChertProj from '../../../../src/assets/images/Rectangle 22.png'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {StyledSection2} from "../../../components/StyledSection2";
+import {Icon} from "../../../components/icon/Icon";
 
 export const Projects = () => {
     return (
 
-        <StyledSection2 id={"works"}>
-            <FlexWrapper direction={"column"} align={"center"} >
-                <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
+        <StyledSection2 id={"works"} max-width={"1366px;"}>
+            <FlexWrapper direction={"column"} >
+                <FlexWrapper justify={"start"} align={"center"}>
+                    <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
+                    <Icon iconId={"line"} width="511" height="2" viewBox="0 0 511 2"/>
+                </FlexWrapper>
                 <FlexWrapper>
-                    <FlexWrapper wrap="wrap">
-                        <StyledDiv>
+                    <FlexWrapper wrap="wrap" gap={"16px;"}>
                             <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
                                          description={"Minecraft servers hosting "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
-                        </StyledDiv>
-                        <StyledDiv>
                             <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
                                          description={"Minecraft servers hosting "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
-                        </StyledDiv>
-                        <StyledDiv>
                             <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
                                          description={"Minecraft servers hosting "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
-                        </StyledDiv>
                     </FlexWrapper>
                 </FlexWrapper>
             </FlexWrapper>
@@ -38,6 +36,4 @@ export const Projects = () => {
     );
 };
 
-const StyledDiv = styled.div`
-  margin: 20px;
-`
+

@@ -27,6 +27,7 @@ export const ProjectItem = (props: ProjectItemPropsType) => {
 };
 const StyledImg = styled.img`
   border: 1px solid #ABB2BF;
+  max-width: 328px;
 `
 const StyledSkills = styled.div`
   border: 1px solid #ABB2BF;

@@ -5,12 +5,13 @@ import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 import {ColorSpan} from "../../../components/ColorSpan";
 import {StyledSection1} from "../../../components/StyledSection1";
+import {Citation} from "../projects/citation/Citation";
 
 export const Main = () => {
     return (
-        <StyledSection1>
-            <FlexWrapper direction={"column"} justify={"center"} align={"center"} id={"home"}>
-                <FlexWrapper align={"center"} justify={"center"}>
+        <StyledSection1  id={"home"}>
+            <FlexWrapper gap={"120px"} direction={"column"} alignItems={"center"} align={"space-between"}>
+                <FlexWrapper align={"center"} >
                     <FlexWrapper direction={"column"}>
                         <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <div><ColorSpan>front-end
                             developer</ColorSpan></div></H1>
@@ -35,18 +36,7 @@ export const Main = () => {
                         </FlexWrapper>
                     </FlexWrapper>
                 </FlexWrapper>
-                <FlexWrapper direction={"column"} align={"flex-end"}>
-                    <FlexWrapper>
-                        <AboluteElStart> <Icon iconId={"quotes"} width="26" height="21"
-                                               viewBox="0 0 26 21"/></AboluteElStart>
-                        <StyledBox>With great power comes great electricity bill</StyledBox>
-                    </FlexWrapper>
-                    <FlexWrapper>
-                        <AboluteElEnd> <Icon iconId={"quotes"} width="26" height="21"
-                                             viewBox="0 0 26 21"/></AboluteElEnd>
-                        <StyledBox>Dr. Who</StyledBox>
-                    </FlexWrapper>
-                </FlexWrapper>
+                <Citation/>
             </FlexWrapper>
         </StyledSection1>
     );
@@ -86,40 +76,8 @@ const LogoEl = styled.div`
   z-index: -1;
 `
 const DotsEl = styled.div`
-  position: relative;
+  position: absolute;
   bottom: 175px;
   left: 360px;
   z-index: 1;
-`
-
-const StyledBox = styled.div`
-  color: #FFF;
-  max-width: 712px;
-  margin: 0 auto;
-  padding: 32px;
-  gap: 10px;
-  border: 2px solid gray;
-  font-family: Fira Code;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-`
-const AboluteElEnd = styled.div`
-  color: #ABB2BF;
-  position: relative;
-  left: 10em;
-  top: -1em;
-  padding: 5px;
-  height: 21px;
-  background: #282C33;
-`
-const AboluteElStart = styled.div`
-  color: #ABB2BF;
-  position: relative;
-  left: 3em;
-  top: -1em;
-  padding: 5px;
-  height: 21px;
-  background: #282C33;
 `
