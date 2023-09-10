@@ -13,11 +13,11 @@ import {Icon} from "../../../components/icon/Icon";
 export const Projects = () => {
     return (
 
-        <StyledSection2 id={"works"} max-width={"1366px;"}>
+        <StyledSection2 id={"works"}>
             <FlexWrapper direction={"column"} >
-                <FlexWrapper justify={"start"} align={"center"}>
-                    <SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle>
-                    <Icon iconId={"line"} width="511" height="2" viewBox="0 0 511 2"/>
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <FlexWrapper gap={"16px"} align={"center"}><SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle><Icon iconId={"line"} width="511" height="2" viewBox="0 0 511 2"/></FlexWrapper>
+                    <A href={"#"}><Span>View all ~&gt;</Span></A>
                 </FlexWrapper>
                 <FlexWrapper>
                     <FlexWrapper wrap="wrap" gap={"16px;"}>
@@ -38,4 +38,14 @@ export const Projects = () => {
     );
 };
 
-
+const Span = styled.span`
+  color: white;
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`
+const A = styled.a`
+  text-decoration: none;
+`

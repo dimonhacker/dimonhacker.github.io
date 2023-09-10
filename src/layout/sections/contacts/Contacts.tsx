@@ -51,7 +51,6 @@ const MessageBox = styled.div`
   padding: 16px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
 `
 
 const A =styled.a`

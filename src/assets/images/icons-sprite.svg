@@ -71,6 +71,6 @@
     </g>
     <g id="line">
 <!--        width="127" height="2" viewBox="0 0 127 2"-->
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M127 1.5H0V0.5H127V1.5Z" fill="#C778DD"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M511 1.5H0V0.5H511V1.5Z" fill="#C778DD"/>
     </g>
 </svg>
