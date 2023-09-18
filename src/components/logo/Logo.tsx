@@ -2,8 +2,6 @@ import React from 'react';
 import {Icon} from "../icon/Icon";
 export const Logo = () => {
     return (
-        <a href="">
-            <Icon iconId={'Logo'} width="16" height="17" viewBox="0 0 16 17"></Icon>
-        </a>
+            <Icon iconId={'smallLogo'} width="23" height="23" viewBox="0 0 16 16"></Icon>
     );
 };

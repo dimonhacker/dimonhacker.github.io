@@ -5,36 +5,40 @@ import {ColorSpan} from "../../../components/ColorSpan";
 import styled from "styled-components";
 import {Logo2} from "../../../components/Logo2";
 import LeftImg from "../../../assets/images/Rectangle-22.webp"
-import {StyledSection2} from "../../../components/StyledSection2";
+import {StyledSection} from "../../../components/StyledSection";
 import {Icon} from "../../../components/icon/Icon";
+import {Container} from "../../../components/Container";
 
 export const About = () => {
     return (
-        <StyledSection2 id={"about-me"}  >
-            <FlexWrapper justify={"space-between"} >
-                <FlexWrapper  maxWidth={"515px"}>
-                    <FlexWrapper align={"center"} wrap={"no-wrap"}>
-                    <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
-                    <Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>
+        <StyledSection id={"about-me"}>
+            <Container>
+                <FlexWrapper justify={"space-between"}>
+                    <FlexWrapper maxWidth={"515px"}>
+                        <FlexWrapper align={"center"} wrap={"no-wrap"}>
+                            <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
+                            <Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>
+                        </FlexWrapper>
+                        <FlexWrapper direction={"column"} justify={"left"}>
+                            <P>Hello, i’m Elias!</P>
+                            <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive
+                                websites
+                                from scratch and raise them into modern user-friendly web experiences. </P>
+                            <P>Transforming my creativity and knowledge into a websites has been my passion for over a
+                                year.
+                                I
+                                have been helping various clients to establish their presence online. I always strive to
+                                learn
+                                about the newest technologies and frameworks.</P>
+                        </FlexWrapper>
+                        <ReadMore href={"#"}>Read more -&gt;</ReadMore>
                     </FlexWrapper>
-                    <FlexWrapper direction={"column"} justify={"left"}>
-                        <P>Hello, i’m Elias!</P>
-                        <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive
-                            websites
-                            from scratch and raise them into modern user-friendly web experiences. </P>
-                        <P>Transforming my creativity and knowledge into a websites has been my passion for over a year.
-                            I
-                            have been helping various clients to establish their presence online. I always strive to
-                            learn
-                            about the newest technologies and frameworks.</P>
+                    <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"}>
+                        <a href={"#"}><Logo2/></a>
                     </FlexWrapper>
-                    <ReadMore href={"#"}>Read more -&gt;</ReadMore>
                 </FlexWrapper>
-                <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"}>
-                    <a href={"#"}><Logo2/></a>
-                </FlexWrapper>
-            </FlexWrapper>
-        </StyledSection2>
+            </Container>
+        </StyledSection>
     );
 };
 

@@ -4,60 +4,78 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 import {ColorSpan} from "../../../components/ColorSpan";
-import {StyledSection1} from "../../../components/StyledSection1";
+import {StyledSection} from "../../../components/StyledSection";
 import {Citation} from "../projects/citation/Citation";
+import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
-        <StyledSection1  id={"home"}>
-            <FlexWrapper gap={"120px"} direction={"column"} alignItems={"center"} align={"space-between"}>
-                <FlexWrapper align={"center"} >
-                    <FlexWrapper direction={"column"} maxWidth={"537px;"}>
-                        <H1>Elias is <ColorSpan>a web designer</ColorSpan> and <ColorSpan>front-end
-                            developer</ColorSpan></H1>
-                        <P>He crafts responsive websites where technologies</P><P> meet creativity</P>
-                        <P>
-                            <button>Contact me</button>
-                        </P>
-                    </FlexWrapper>
-                    <FlexWrapper direction={"column"}>
-                        <LogoEl>
-                            <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                        </LogoEl>
+        <StyledSection id={"home"}>
+            <Container>
+                <FlexWrapper gap={"120px"} direction={"column"}>
+                    <FlexWrapper align={"center"} justify={"space-between"}>
+                        <FlexWrapper direction={"column"} maxWidth={"537px;"}>
+                            <H1>Elias is a <ColorSpan>web designer</ColorSpan> and <ColorSpan>front-end
+                                developer</ColorSpan></H1>
+                            <P>He crafts responsive websites where technologies meet creativity</P>
+                            <ButtonWrapper>
+                                <Btn>Contact me !!</Btn>
+                            </ButtonWrapper>
+                        </FlexWrapper>
                         <FlexWrapper direction={"column"}>
-                            <Photo/>
-                            <FlexWrapper>
-                                <Rect/>
-                                <P>Currently working on <B>Portfolio</B></P>
+                            <LogoEl>
+                                <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
+                            </LogoEl>
+                            <FlexWrapper direction={"column"}>
+                                <Photo/>
+                                <FlexWrapper>
+                                    <Rect/>
+                                    <P>Currently working on <B>Portfolio</B></P>
+                                </FlexWrapper>
                             </FlexWrapper>
-                            <DotsEl>
-                                <Icon iconId={'dots'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                            </DotsEl>
                         </FlexWrapper>
                     </FlexWrapper>
+                    <Citation/>
                 </FlexWrapper>
-                <Citation/>
-            </FlexWrapper>
-        </StyledSection1>
+            </Container>
+        </StyledSection>
     );
 };
-
-
+const ButtonWrapper = styled.div`
+  width: unset;
+`
+const Btn = styled.button`
+  color: white;
+  font-family: Fira Code;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 1px solid #C778DD;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  width: auto;
+`
 const H1 = styled.h1`
   color: #FFF;
-  font-family: Fira Code;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-top: 1em;
+  margin-bottom: 1em;
 `
+
 const P = styled.div`
   color: #ABB2BF;
-  font-family: Fira Code;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 25px; /* 156.25% */
+  margin-bottom: 1em;
+  max-width: 463px;
 `
 const B = styled.b`
   color: white;
@@ -75,9 +93,4 @@ const LogoEl = styled.div`
   right: 10px;
   z-index: -1;
 `
-const DotsEl = styled.div`
-  position: absolute;
-  bottom: 175px;
-  left: 360px;
-  z-index: 1;
-`
+

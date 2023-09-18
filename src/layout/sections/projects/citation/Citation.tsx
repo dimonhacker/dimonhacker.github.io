@@ -2,43 +2,56 @@ import React from 'react';
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
+import Quotes from "../../../../assets/images/Quotes.svg";
+import {theme} from "../../../../styles/Theme";
 
 export const Citation = () => {
     return (
-
-        <FlexWrapper direction={"column"} align={"flex-end"}>
-            <FlexWrapper>
-                <AboluteElStart> <Icon iconId={"quotes"} width="26" height="21"
-                                       viewBox="0 0 26 21"/></AboluteElStart>
-                <StyledBox>With great power comes great electricity bill</StyledBox>
-            </FlexWrapper>
-            <FlexWrapper >
-                <AboluteElEnd> <Icon iconId={"quotes"} width="26" height="21"
-                                     viewBox="0 0 26 21"/></AboluteElEnd>
-                <StyledBox2>- Dr. Who</StyledBox2>
-            </FlexWrapper>
-        </FlexWrapper>
+<FlexWrapper justify={"center"}>
+            <QuoteDiv>
+                <StyledBox><span>With</span> great power comes great electricity bill</StyledBox>
+                <StyledBox2>- Dr. <span>Who</span></StyledBox2>
+            </QuoteDiv>
+</FlexWrapper>
     );
 };
 
 
+const QuoteDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+  align-content: center;
+`
 const StyledBox = styled.div`
   color: #FFF;
-  max-width: 515px;
   margin: 0 auto;
   padding: 32px;
   gap: 10px;
   border: 2px solid gray;
   font-family: Fira Code;
   font-size: 24px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  position: relative;
+
+  span:first-child {
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url(${Quotes});
+      max-width: 25px;
+      width: 100%;
+      max-height: 20px;
+      height: 100%;
+      top: -.5em;
+      left: 1em;
+      background-color: ${theme.colors.primaryBg};
+    }
+  }
 `
 const StyledBox2= styled.div`
   color: #FFF;
   max-width: 515px;
-  margin: 0 auto;
   padding: 32px;
   gap: 10px;
   border: 2px solid gray;
@@ -48,6 +61,21 @@ const StyledBox2= styled.div`
   font-weight: 500;
   line-height: normal;
   align-self: end;
+  position: relative;
+  span:first-child{
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(${Quotes});
+      max-width: 25px;
+      width: 100%;
+      max-height: 20px;
+      height: 100%;
+      top: -.5em;
+      right: 1em;
+      background-color: ${theme.colors.primaryBg};
+    }
+  }
 `
 const AboluteElEnd = styled.div`
   color: #ABB2BF;

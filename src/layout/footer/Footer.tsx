@@ -1,34 +1,35 @@
 import React from 'react';
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
-import {StyledSection2} from "../../components/StyledSection2";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-        <FlexWrapper justify={"space-between"} direction={"column"} gap={"48px"}>
-            <FlexWrapper justify={"space-between"}>
-                <FlexWrapper direction={"column"}>
-                    <FlexWrapper gap={"24px"} alignItems={"center"}>
-                        <StyledSpan><Logo/> Elias</StyledSpan>
-                        <CopyrightMail>elias@elias-dev.ml</CopyrightMail>
+            <FlexWrapper justify={"space-between"} direction={"column"} gap={"48px"}>
+                <FlexWrapper justify={"space-between"}>
+                    <FlexWrapper direction={"column"}>
+                        <FlexWrapper gap={"24px"} alignItems={"center"}>
+                            <FlexWrapper gap={"8px"}>
+                                <Logo/>
+                                <StyledSpan> Elias</StyledSpan>
+                            </FlexWrapper>
+                            <CopyrightMail>elias@elias-dev.ml</CopyrightMail>
+                        </FlexWrapper>
+                        <Descr>Web designer and front-end developer</Descr>
                     </FlexWrapper>
-                    <Descr>Web designer and front-end developer</Descr>
-                </FlexWrapper>
-                <FlexWrapper direction={"column"} gap={"12px"}>
-                    <Media>Media</Media>
-                    <FlexWrapper>
-                        <a href={"#"}><Icon iconId={"email"}></Icon></a>
-                        <a href={"#"}><Icon iconId={"telegram"}></Icon></a>
-                        <a href={"#"}><Icon iconId={"github"}></Icon></a>
+                    <FlexWrapper direction={"column"} gap={"12px"}>
+                        <Media>Media</Media>
+                        <FlexWrapper>
+                            <a href={"#"}><Icon iconId={"email"}></Icon></a>
+                            <a href={"#"}><Icon iconId={"telegram"}></Icon></a>
+                            <a href={"#"}><Icon iconId={"github"}></Icon></a>
+                        </FlexWrapper>
                     </FlexWrapper>
                 </FlexWrapper>
+                <CopyrightMail>© Copyright 2022. Made by Elias</CopyrightMail>
             </FlexWrapper>
-            <CopyrightMail>© Copyright 2022. Made by Elias</CopyrightMail>
-        </FlexWrapper>
         </StyledFooter>
     );
 };

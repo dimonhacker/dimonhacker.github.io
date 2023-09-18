@@ -4,25 +4,31 @@ import {ColorSpan} from "../../../components/ColorSpan";
 import {SectionTitle} from "../../../components/SectionTitle";
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
-import {StyledSection1} from "../../../components/StyledSection1";
+import {StyledSection} from "../../../components/StyledSection";
+import {Container} from "../../../components/Container";
 
 export const Contacts = () => {
     return (
-        <StyledSection1 id={"contacts"} >
-            <FlexWrapper direction={"column"}>
-            <FlexWrapper  align={"center"} wrap={"no-wrap"}>
-                <SectionTitle><ColorSpan>#</ColorSpan>contacts</SectionTitle><Icon iconId={"line"}  width="127" height="2" viewBox="0 0 127 2"/>
-            </FlexWrapper>
-                <FlexWrapper justify={"space-between"}>
-                <P>I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</P>
-                <MessageBox>
-                    <MessageMe>Message me here</MessageMe>
-                    <A href={"#"}><Icon iconId={"email"}></Icon>elias@elias.me</A>
-                    <A href={"#"}><Icon iconId={"telegram"}></Icon>t.me</A>
-                </MessageBox>
+        <StyledSection id={"contacts"}>
+            <Container>
+                <FlexWrapper direction={"column"}>
+                    <FlexWrapper align={"center"} wrap={"no-wrap"}>
+                        <SectionTitle><ColorSpan>#</ColorSpan>contacts</SectionTitle><Icon iconId={"line"} width="127"
+                                                                                           height="2"
+                                                                                           viewBox="0 0 127 2"/>
+                    </FlexWrapper>
+                    <FlexWrapper justify={"space-between"}>
+                        <P>I’m interested in freelance opportunities. However, if you have other request or question,
+                            don’t hesitate to contact me</P>
+                        <MessageBox>
+                            <MessageMe>Message me here</MessageMe>
+                            <A href={"#"}><Icon iconId={"email"}></Icon>elias@elias.me</A>
+                            <A href={"#"}><Icon iconId={"telegram"}></Icon>t.me</A>
+                        </MessageBox>
+                    </FlexWrapper>
                 </FlexWrapper>
-            </FlexWrapper>
-        </StyledSection1>
+            </Container>
+        </StyledSection>
     );
 };
 
@@ -46,15 +52,16 @@ const MessageMe = styled.p`
 `
 
 const MessageBox = styled.div`
-  display: flex;
+  display: inline-flex;
   border: 1px solid #ABB2BF;
-  padding: 16px;
   flex-direction: column;
   align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
 `
 
-const A =styled.a`
-  color : #ABB2BF;
+const A = styled.a`
+  color: #ABB2BF;
   font-family: Fira Code;
   font-size: 16px;
   font-style: normal;

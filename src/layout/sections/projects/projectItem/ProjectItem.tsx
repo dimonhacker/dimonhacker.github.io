@@ -27,20 +27,20 @@ export const ProjectItem = (props: ProjectItemPropsType) => {
 };
 const StyledImg = styled.img`
   border: 1px solid #ABB2BF;
-  max-width: 328px;
+  max-width: 330px;
 `
 const StyledSkills = styled.div`
   border: 1px solid #ABB2BF;
   display: flex;
   padding: 8px;
-  max-width: 312px;
+  max-width: 330px;
 `
 const StyledDescr= styled.div`
   border: 1px solid #ABB2BF;
   display: flex;
   flex-direction: column;
   padding: 16px;
-  max-width: 296px;
+  max-width: 330px;
 `
 const StyledSpan = styled.span`
   color: #ABB2BF;
@@ -50,7 +50,7 @@ const StyledSpan = styled.span`
   font-weight: 400;
   line-height: normal;
   padding: 8px;
-  max-width: 314px;
+  max-width: 330px;
 `
 const ButtonDiv = styled.div`
   max-width: 77px;
