@@ -1,6 +1,5 @@
 import React from 'react';
 import {FlexWrapper} from "../../../../components/FlexWrapper";
-import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 import Quotes from "../../../../assets/images/Quotes.svg";
 import {theme} from "../../../../styles/Theme";

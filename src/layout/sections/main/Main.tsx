@@ -7,7 +7,6 @@ import {ColorSpan} from "../../../components/ColorSpan";
 import {StyledSection} from "../../../components/StyledSection";
 import {Citation} from "../projects/citation/Citation";
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (

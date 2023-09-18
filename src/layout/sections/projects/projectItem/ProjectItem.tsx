@@ -1,7 +1,6 @@
 import React from 'react';
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
-import {Header} from "../../../header/Header";
 
 type ProjectItemPropsType = {
     imgSrc: string

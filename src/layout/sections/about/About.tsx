@@ -4,7 +4,6 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {ColorSpan} from "../../../components/ColorSpan";
 import styled from "styled-components";
 import {Logo2} from "../../../components/Logo2";
-import LeftImg from "../../../assets/images/Rectangle-22.webp"
 import {StyledSection} from "../../../components/StyledSection";
 import {Icon} from "../../../components/icon/Icon";
 import {Container} from "../../../components/Container";

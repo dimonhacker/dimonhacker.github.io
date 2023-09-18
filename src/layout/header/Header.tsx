@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {Icon} from "../../components/icon/Icon";
 
 const items = ["#home", "#works", "#about-me", "#contacts"]
 export const Header = () => {
