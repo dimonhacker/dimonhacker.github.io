@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {theme} from "../../styles/Theme";
 
 const items = ["#home", "#works", "#about-me", "#contacts"]
 export const Header = () => {
@@ -27,6 +28,8 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
+  background-color: ${theme.colors.primaryBg};
+  z-index: 1;
 `
 const StyledSpan = styled.p`
   color: white;
