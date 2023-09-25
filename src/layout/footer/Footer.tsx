@@ -9,7 +9,7 @@ export const Footer = () => {
         <StyledFooter>
             <FlexWrapper justify={"space-between"} direction={"column"} gap={"48px"}>
                 <FlexWrapper justify={"space-between"}>
-                    <FlexWrapper direction={"column"}>
+                    <FlexWrapper direction={"column"} gap={"16px"}>
                         <FlexWrapper gap={"24px"} alignItems={"center"}>
                             <FlexWrapper gap={"8px"}>
                                 <Logo/>

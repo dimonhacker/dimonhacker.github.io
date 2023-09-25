@@ -18,7 +18,7 @@ export const Contacts = () => {
                         {/*                                                                   height="2"*/}
                         {/*                                                                   viewBox="0 0 127 2"/>*/}
                     </FlexWrapper>
-                    <FlexWrapper justify={"space-between"}>
+                    <FlexWrapper justify={"space-between"} marginTop={"45px;"}>
                         <P>I’m interested in freelance opportunities. However, if you have other request or question,
                             don’t hesitate to contact me</P>
                         <MessageBox>
