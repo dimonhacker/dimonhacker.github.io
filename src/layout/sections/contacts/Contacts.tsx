@@ -13,9 +13,10 @@ export const Contacts = () => {
             <Container>
                 <FlexWrapper direction={"column"}>
                     <FlexWrapper align={"center"} wrap={"no-wrap"}>
-                        <SectionTitle><ColorSpan>#</ColorSpan>contacts</SectionTitle><Icon iconId={"line"} width="127"
-                                                                                           height="2"
-                                                                                           viewBox="0 0 127 2"/>
+                        <SectionTitle mwidth={"127px"}><ColorSpan>#</ColorSpan>contacts</SectionTitle>
+                        {/*<Icon iconId={"line"} width="127"*/}
+                        {/*                                                                   height="2"*/}
+                        {/*                                                                   viewBox="0 0 127 2"/>*/}
                     </FlexWrapper>
                     <FlexWrapper justify={"space-between"}>
                         <P>I’m interested in freelance opportunities. However, if you have other request or question,

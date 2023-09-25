@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const StyledSection = styled.section`
-  min-height: 70vh;
+type StyledSectionPropsType = {
+    minHeight? : string
+}
+export const StyledSection = styled.section<StyledSectionPropsType>`
+  min-height: ${props => props.minHeight};
   border: white;
   margin-bottom: 4em;
+  
 `

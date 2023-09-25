@@ -44,7 +44,7 @@ const StyledBox = styled.div`
       height: 100%;
       top: -.5em;
       left: 1em;
-      background-color: ${theme.colors.primaryBg};
+      background-color: ${theme.colors.background};
     }
   }
 `
@@ -72,25 +72,7 @@ const StyledBox2= styled.div`
       height: 100%;
       top: -.5em;
       right: 1em;
-      background-color: ${theme.colors.primaryBg};
+      background-color: ${theme.colors.background};
     }
   }
-`
-const AboluteElEnd = styled.div`
-  color: #ABB2BF;
-  position: absolute;
-  left: 10em;
-  top: -1em;
-  padding: 5px;
-  height: 21px;
-  background: #282C33;
-`
-const AboluteElStart = styled.div`
-  color: #ABB2BF;
-  position: absolute;
-  left: 3em;
-  top: -1em;
-  padding: 5px;
-  height: 21px;
-  background: #282C33;
 `

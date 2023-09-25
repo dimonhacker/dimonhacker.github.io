@@ -8,8 +8,10 @@ import ProtectX from '../../../../src/assets/images/Rectangle 23.png'
 import Kahoot from '../../../../src/assets/images/Rectangle 24.png'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {StyledSection} from "../../../components/StyledSection";
-import {Icon} from "../../../components/icon/Icon";
 import {Container} from "../../../components/Container";
+
+
+
 
 export const Projects = () => {
     return (
@@ -19,22 +21,22 @@ export const Projects = () => {
                 <FlexWrapper direction={"column"}>
                     <FlexWrapper justify={"space-between"} align={"center"}>
                         <FlexWrapper gap={"16px"} align={"center"} wrap={"no-wrap"}
-                                     maxWidth={"100vw"}><SectionTitle><ColorSpan>#</ColorSpan>projects</SectionTitle><Icon
-                            iconId={"line"} width="511" height="2" viewBox="0 0 511 2"/></FlexWrapper>
+                                     maxWidth={"100vw"}><SectionTitle mwidth={"511px"}><ColorSpan>#</ColorSpan>projects</SectionTitle>
+                        </FlexWrapper>
                         <A href={"#"}><Span>View all ~&gt;</Span></A>
                     </FlexWrapper>
-                    <FlexWrapper>
+                    <FlexWrapper marginTop={"50px;"}>
                         <FlexWrapper wrap="wrap" gap={"16px;"}>
                             <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
                                          description={"Minecraft servers hosting "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
                             <ProjectItem imgSrc={ProtectX}
                                          skills={"React Express Discord.js Node.js HTML CSS Python Flask"}
-                                         title={"ProtextX"}
-                                         description={"Discord anti-crash bot "} live={"Live<~>"}
+                                         title={"ProtectX"}
+                                         description={"Discord anti-crash bot"} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
                             <ProjectItem imgSrc={Kahoot} skills={"CSS Express Node.js"} title={"Kahoot Answers Viewer"}
-                                         description={"Get answers to your kahoot quiz "} live={"Live<~>"}
+                                         description={"Get answers to your kahoot quiz"} live={"Live<~>"}
                                          cashed={""}></ProjectItem>
                         </FlexWrapper>
                     </FlexWrapper>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {getKeyEventProps} from "@testing-library/user-event/dist/keyboard/getEventProps";
 
 type FlexWrapperPropsType = {
     direction?: string
@@ -8,6 +9,8 @@ type FlexWrapperPropsType = {
     alignItems?: string
     gap?:string
 
+    marginTop?:string;
+    marginBottom?:string;
     maxWidth?: string
 }
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -19,4 +22,6 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   align-items: ${props => props.alignItems || ""};
   gap: ${props => props.gap || ""};
   max-width: ${props => props.maxWidth || ""};
+  margin-top: ${props => props.marginTop || ""};
+  margin-bottom: ${props => props.marginBottom || ""};
 `

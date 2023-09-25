@@ -14,10 +14,9 @@ export const Skills = () => {
                 <FlexWrapper>
                     <FlexWrapper direction={"column"}>
                         <FlexWrapper justify={"start"} align={"center"} wrap={"no-wrap"}>
-                            <SectionTitle><ColorSpan>#</ColorSpan>skills</SectionTitle>
-                            <Icon iconId={"line"} width="239" height="2" viewBox="0 0 239 2"/>
+                            <SectionTitle mwidth={"239px"}><ColorSpan>#</ColorSpan>skills</SectionTitle>
                         </FlexWrapper>
-                        <FlexWrapper>
+                        <FlexWrapper marginTop={"45px;"}>
                             <FlexWrapper direction={"column"}>
                                 <FlexWrapper justify={"space-around"}>
                                     <Icon iconId={'dots'} width="200" height="200" viewBox="0 0 200 200"/>

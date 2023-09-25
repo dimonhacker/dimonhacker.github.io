@@ -15,11 +15,11 @@ export const About = () => {
                 <FlexWrapper justify={"space-between"}>
                     <FlexWrapper maxWidth={"515px"}>
                         <FlexWrapper align={"center"} wrap={"no-wrap"}>
-                            <SectionTitle><ColorSpan>#</ColorSpan>about-me</SectionTitle>
-                            <Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>
+                            <SectionTitle mwidth={"326px"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
+                            {/*<Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>*/}
                         </FlexWrapper>
-                        <FlexWrapper direction={"column"} justify={"left"}>
-                            <P>Hello, i’m Elias!</P>
+                        <FlexWrapper marginTop={"25px"} direction={"column"} justify={"space-between"}>
+                            <P>Hello, i’m Dmitry!</P>
                             <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive
                                 websites
                                 from scratch and raise them into modern user-friendly web experiences. </P>
@@ -54,4 +54,5 @@ const ReadMore = styled.a`
   font-family: Fira Code;
   font-size: 16px;
   font-weight: 500;
+  margin-top: 27px;
 `

@@ -26,7 +26,7 @@ export const HeaderMenu = (props: {menuItems: Array<String>}) => {
 };
 
 const Select = styled.select`
-  color: ${theme.colors.secondaryBg};
+  color: ${theme.colors.secondaryTextColor};
   font-family: Fira Code;
   font-size: 16px;
   font-style: normal;
@@ -37,7 +37,7 @@ const Select = styled.select`
 `
 
 const Option = styled.option`
-background-color: ${theme.colors.primaryBg}
+background-color: ${theme.colors.background}
 `
 const StyledHeaderMenu = styled.nav`
   ul{

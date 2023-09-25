@@ -10,7 +10,7 @@ import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
-        <StyledSection id={"home"}>
+        <StyledSection id={"home"} minHeight={"100vh"}>
             <Container>
                 <FlexWrapper gap={"120px"} direction={"column"}>
                     <FlexWrapper align={"center"} justify={"space-between"}>
@@ -42,15 +42,12 @@ export const Main = () => {
     );
 };
 const ButtonWrapper = styled.div`
-  width: unset;
+  //width: unset;
 `
 const Btn = styled.button`
   color: white;
-  font-family: Fira Code;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   border: 1px solid #C778DD;
   padding: 8px 16px;
   align-items: flex-start;

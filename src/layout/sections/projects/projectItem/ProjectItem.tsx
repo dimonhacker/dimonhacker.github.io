@@ -1,6 +1,7 @@
 import React from 'react';
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme";
 
 type ProjectItemPropsType = {
     imgSrc: string
@@ -16,23 +17,23 @@ export const ProjectItem = (props: ProjectItemPropsType) => {
             <StyledImg src={props.imgSrc}></StyledImg>
             <StyledSkills><StyledSpan>{props.skills}</StyledSpan></StyledSkills>
             <StyledDescr>
-                <StyledSpan>{props.title}</StyledSpan>
+                <StyledTitle>{props.title}</StyledTitle>
                 <StyledSpan>{props.description}</StyledSpan>
-                <ButtonDiv><StyledButton href={"#"}>{props.live}</StyledButton></ButtonDiv>
+                <ButtonDiv><StyledLink href={"#"}>{props.live}</StyledLink></ButtonDiv>
             </StyledDescr>
 
         </FlexWrapper>
     );
 };
 const StyledImg = styled.img`
-  border: 1px solid #ABB2BF;
+  border: 1px solid ${theme.colors.secondaryTextColor};
   max-width: 330px;
 `
 const StyledSkills = styled.div`
-  border: 1px solid #ABB2BF;
-  display: flex;
-  padding: 8px;
+  border: 1px solid ${theme.colors.secondaryTextColor};
   max-width: 330px;
+  line-height: 2em;
+  padding: 0 8px;
 `
 const StyledDescr= styled.div`
   border: 1px solid #ABB2BF;
@@ -40,32 +41,34 @@ const StyledDescr= styled.div`
   flex-direction: column;
   padding: 16px;
   max-width: 330px;
+  gap: 16px;
+  align-items: flex-start;
+  align-self: stretch;
+`
+const StyledTitle = styled.h2`
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
 `
 const StyledSpan = styled.span`
   color: #ABB2BF;
-  font-family: Fira Code;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  padding: 8px;
-  max-width: 330px;
 `
 const ButtonDiv = styled.div`
+  border: 1px solid ${theme.colors.accent};
+  padding: 8px 16px;
+  display: inline-block;
+  width: min-content;
+`
+const StyledLink = styled.a`
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
   max-width: 77px;
   height: 21px;
-  border: 1px solid #ABB2BF;
-  padding: 8px 16px 8px 16px;
-`
-const StyledButton = styled.a`
-  color: #FFF;
-  font-family: Fira Code;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;
-  
+  display: inline;
 `
 
 
