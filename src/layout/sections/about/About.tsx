@@ -5,7 +5,6 @@ import {ColorSpan} from "../../../components/ColorSpan";
 import styled from "styled-components";
 import {Logo2} from "../../../components/Logo2";
 import {StyledSection} from "../../../components/StyledSection";
-import {Icon} from "../../../components/icon/Icon";
 import {Container} from "../../../components/Container";
 
 export const About = () => {
@@ -56,3 +55,4 @@ const ReadMore = styled.a`
   font-weight: 500;
   margin-top: 27px;
 `
+

@@ -21,11 +21,8 @@ const StyledPhoto = styled.div`
   max-width: 457px;
   height: 386px;
   position: relative;
-
+  
 `
-const Link = styled.a`
-`
-
 const ImageWrapper = styled.div`
   position: relative;
   &::before {

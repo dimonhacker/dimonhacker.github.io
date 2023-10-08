@@ -10,11 +10,11 @@ import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
-        <StyledSection id={"home"} minHeight={"100vh"}>
+        <StyledSection id={"home"} >
             <Container>
-                <FlexWrapper gap={"120px"} direction={"column"}>
-                    <FlexWrapper align={"center"} justify={"space-between"}>
-                        <FlexWrapper direction={"column"} maxWidth={"537px;"}>
+                <FlexWrapper gap={"120px"} direction={"column"} align={"center"}>
+                    <FlexWrapper align={"center"} justify={"space-around"}>
+                        <FlexWrapper direction={"column"} maxWidth={"537px;"} >
                             <H1>Elias is a <ColorSpan>web designer</ColorSpan> and <ColorSpan>front-end
                                 developer</ColorSpan></H1>
                             <P>He crafts responsive websites where technologies meet creativity</P>
@@ -41,6 +41,7 @@ export const Main = () => {
         </StyledSection>
     );
 };
+
 const ButtonWrapper = styled.div`
   //width: unset;
 `
@@ -53,6 +54,9 @@ const Btn = styled.button`
   align-items: flex-start;
   gap: 10px;
   width: auto;
+  @media (max-width: 1023px){
+    display: none;
+  }
 `
 const H1 = styled.h1`
   color: #FFF;
