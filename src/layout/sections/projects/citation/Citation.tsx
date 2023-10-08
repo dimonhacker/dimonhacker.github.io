@@ -50,7 +50,7 @@ const StyledBox = styled.div`
 `
 const StyledBox2= styled.div`
   color: #FFF;
-  max-width: 515px;
+  //max-width: 515px;
   padding: 32px;
   gap: 10px;
   border: 2px solid gray;

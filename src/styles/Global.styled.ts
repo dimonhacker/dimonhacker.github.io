@@ -18,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: ${theme.colors.background}
-    min-width: 515px;
   }
   @font-face {
     font-family: 'Fira Code';

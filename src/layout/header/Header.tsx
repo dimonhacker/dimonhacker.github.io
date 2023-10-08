@@ -28,8 +28,8 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${theme.colors.background};
-  z-index: 1;
+  //background-color: ${theme.colors.background};
+  //z-index: 1;
 `
 const StyledSpan = styled.p`
   color: white;
