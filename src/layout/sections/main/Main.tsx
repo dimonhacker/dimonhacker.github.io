@@ -10,7 +10,7 @@ import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
-        <StyledSection id={"home"} >
+        <StyledSection id={"home"} minHeight={"100vh"}>
             <Container>
                 <FlexWrapper gap={"120px"} direction={"column"} align={"center"}>
                     <FlexWrapper align={"center"} justify={"space-around"}>
