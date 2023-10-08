@@ -8,4 +8,6 @@ export const StyledSection = styled.section<StyledSectionPropsType>`
   min-height: ${props => props.minHeight};
   border: white;
   margin-bottom: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
 `

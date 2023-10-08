@@ -29,7 +29,7 @@ export const Projects = () => {
                         {/*</FlexWrapper>*/}
                     </FlexWrapper>
                     <FlexWrapper marginTop={"50px;"}>
-                        <FlexWrapper wrap="wrap" gap={"16px;"}>
+                        <FlexWrapper wrap="wrap" gap={"16px;"} justify={"space-around"}>
                             <ProjectItem imgSrc={ChertProj} skills={"HTML CSS Python Flask"} title={"ChertNodes"}
                                          description={"Minecraft servers hosting "} live={"Live<~>"}
                                          cashed={""}></ProjectItem>

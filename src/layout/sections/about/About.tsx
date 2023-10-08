@@ -15,7 +15,7 @@ export const About = () => {
                 <FlexWrapper justify={"space-between"}>
                     <FlexWrapper maxWidth={"515px"}>
                         <FlexWrapper align={"center"} wrap={"no-wrap"}>
-                            <SectionTitle mwidth={"326px"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
+                            <SectionTitle mwidth={"100%"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
                             {/*<Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>*/}
                         </FlexWrapper>
                         <FlexWrapper marginTop={"25px"} direction={"column"} justify={"space-between"}>
