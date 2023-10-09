@@ -2,6 +2,7 @@ import React from 'react';
 import PhotoImg from '../../../assets/images/Image.webp'
 import styled from "styled-components";
 import Dots from '../../../assets/images/Dots.svg';
+import mainLogo from '../../../assets/images/mainLogo.svg';
 
 
 export const Photo = () => {
@@ -26,8 +27,15 @@ const StyledPhoto = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   &::before {
+    position: absolute;
     content: "";
-    display: block;
+    top: 85px;
+    left: -10px;
+    background-image: url(${mainLogo});
+    object-fit: cover;
+    width: 156px;
+    height: 156px;
+    z-index: -1;
   }
 
   &::after {

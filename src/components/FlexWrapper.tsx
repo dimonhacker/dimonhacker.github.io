@@ -24,4 +24,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   max-width: ${props => props.maxWidth || ""};
   margin-top: ${props => props.marginTop || ""};
   margin-bottom: ${props => props.marginBottom || ""};
+
 `

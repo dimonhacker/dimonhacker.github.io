@@ -2,17 +2,17 @@ import React from 'react';
 import {Photo} from "./Photo";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
-import {Icon} from "../../../components/icon/Icon";
 import {ColorSpan} from "../../../components/ColorSpan";
 import {StyledSection} from "../../../components/StyledSection";
 import {Citation} from "../projects/citation/Citation";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
         <StyledSection id={"home"} minHeight={"100vh"}>
             <Container>
-                <FlexWrapper gap={"120px"} direction={"column"} align={"center"}>
+                <FlexWrapper gap={"120px"} direction={"column"} align={"space-around"}>
                     <FlexWrapper align={"center"} justify={"space-around"}>
                         <FlexWrapper direction={"column"} maxWidth={"537px;"} >
                             <H1>Elias is a <ColorSpan>web designer</ColorSpan> and <ColorSpan>front-end
@@ -23,15 +23,12 @@ export const Main = () => {
                             </ButtonWrapper>
                         </FlexWrapper>
                         <FlexWrapper direction={"column"}>
-                            <LogoEl>
-                                <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"></Icon>
-                            </LogoEl>
                             <FlexWrapper direction={"column"}>
                                 <Photo/>
-                                <FlexWrapper>
+                                <StyledFrame>
                                     <Rect/>
                                     <P>Currently working on <B>Portfolio</B></P>
-                                </FlexWrapper>
+                                </StyledFrame>
                             </FlexWrapper>
                         </FlexWrapper>
                     </FlexWrapper>
@@ -74,23 +71,20 @@ const P = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 25px; /* 156.25% */
-  margin-bottom: 1em;
   max-width: 463px;
 `
 const B = styled.b`
   color: white;
 `
 const Rect = styled.div`
-  margin-top: 4px;
   margin-right: 5px;
   width: 16px;
   height: 16px;
   background: #C778DD;
 `
-const LogoEl = styled.div`
-  position: relative;
-  top: 250px;
-  right: 10px;
-  z-index: -1;
+const StyledFrame = styled.div`
+  display: flex;
+  padding: 0.3em 0.5em;
+  align-items: center;
+  border: 1px solid ${theme.colors.secondaryTextColor};
 `
-
