@@ -34,4 +34,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: unset;
     border:none;
   }
+  
+  @media screen and (max-width: 609px){
+    .aboutWrapper{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 `

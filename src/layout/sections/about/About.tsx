@@ -11,12 +11,12 @@ export const About = () => {
     return (
         <StyledSection id={"about-me"}>
             <Container>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper className={"aboutWrapper"} justify={"space-between"} wrap={"no-wrap"}>
                     <FlexWrapper maxWidth={"515px"}>
                         <FlexWrapper align={"center"} wrap={"no-wrap"}>
                             <SectionTitle mwidth={"100%"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
                         </FlexWrapper>
-                        <FlexWrapper marginTop={"25px"} direction={"column"} justify={"space-between"}>
+                        <FlexWrapper  marginTop={"25px"} direction={"column"} justify={"space-between"}>
                             <P>Hello, i’m Dmitry!</P>
                             <P>I’m a self-taught front-end developer based in Vologda, Russia. I can develop responsive
                                 websites
@@ -30,7 +30,7 @@ export const About = () => {
                         </FlexWrapper>
                         <ReadMore href={"#"}>Read more -&gt;</ReadMore>
                     </FlexWrapper>
-                    <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"} >
+                    <FlexWrapper className={"logoClass"} direction={"row"} maxWidth={"50%"}>
                         <a href={"#"}><Logo2/></a>
                     </FlexWrapper>
                 </FlexWrapper>
@@ -54,4 +54,5 @@ const ReadMore = styled.a`
   font-weight: 500;
   margin-top: 27px;
 `
+
 
