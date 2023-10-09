@@ -20,17 +20,17 @@ export const Skills = () => {
                         </FlexWrapper>
                         <FlexWrapper marginTop={"45px;"} className={"wrapper"}>
                             <StyledGrid>
-                                {/*<FlexWrapper direction={"column"}>*/}
-                                {/*    <FlexWrapper justify={"space-around"}>*/}
-                                {/*        <Icon iconId={'dots'} width="200" height="200" viewBox="0 0 200 200"/>*/}
-                                {/*        <Icon iconId={'rectangle-24'} width="86" height="86" viewBox="0 0 86 86"/>*/}
-                                {/*    </FlexWrapper>*/}
-                                {/*    <FlexWrapper justify={"space-around"}>*/}
-                                {/*        <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"/>*/}
-                                {/*        <Icon iconId={'dots'} width="86" height="86" viewBox="0 0 86 86"/>*/}
-                                {/*        <Icon iconId={'rectangle-23'} width="52" height="52" viewBox="0 0 52 52"/>*/}
-                                {/*    </FlexWrapper>*/}
-                                {/*</FlexWrapper>*/}
+                                <FlexWrapper className={"fon"} direction={"column"}>
+                                    <FlexWrapper justify={"space-around"}>
+                                        <Icon iconId={'dots'} width="200" height="200" viewBox="0 0 200 200"/>
+                                        <Icon iconId={'rectangle-24'} width="86" height="86" viewBox="0 0 86 86"/>
+                                    </FlexWrapper>
+                                    <FlexWrapper justify={"space-around"}>
+                                        <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"/>
+                                        <Icon iconId={'dots'} width="86" height="86" viewBox="0 0 86 86"/>
+                                        <Icon iconId={'rectangle-23'} width="52" height="52" viewBox="0 0 52 52"/>
+                                    </FlexWrapper>
+                                </FlexWrapper>
                                 <StyledGridSmall className={"skills"}>
                                     <FlexWrapper  className={"grid-item"} direction={"column"}><Skill  title={"Languages"}
                                                                              description={"Typescript Lua Python JavaScript"}/></FlexWrapper>
@@ -62,9 +62,18 @@ const StyledGrid = styled.div`
   .skills:first-child{
     grid-area: 1/2/1/2;
   }
+  @media screen and (max-width: 1023px){
+    .skills:nth-child(2){
+      grid-area: 1/2/1/2;
+    }
+      .fon{
+        display: none;
+      }
+    
+  }
   @media screen and (max-width: 609px){
     grid-template-columns: 1fr;    
-    gap: 20px;    
+    gap: 20px;
   }
   
 `
