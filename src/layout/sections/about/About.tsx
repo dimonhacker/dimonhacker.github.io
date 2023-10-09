@@ -15,7 +15,6 @@ export const About = () => {
                     <FlexWrapper maxWidth={"515px"}>
                         <FlexWrapper align={"center"} wrap={"no-wrap"}>
                             <SectionTitle mwidth={"100%"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
-                            {/*<Icon iconId={"line"} width="326" height="2" viewBox=" 0 326 2"/>*/}
                         </FlexWrapper>
                         <FlexWrapper marginTop={"25px"} direction={"column"} justify={"space-between"}>
                             <P>Hello, i’m Dmitry!</P>
@@ -31,7 +30,7 @@ export const About = () => {
                         </FlexWrapper>
                         <ReadMore href={"#"}>Read more -&gt;</ReadMore>
                     </FlexWrapper>
-                    <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"}>
+                    <FlexWrapper direction={"row"} maxWidth={"50%"} wrap={"wrap"} >
                         <a href={"#"}><Logo2/></a>
                     </FlexWrapper>
                 </FlexWrapper>
