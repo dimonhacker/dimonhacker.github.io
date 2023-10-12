@@ -47,6 +47,7 @@ const P = styled.div`
   font-weight: 500;
   line-height: normal;
   max-width: 505px;
+  margin-bottom: 2em;
 `
 const MessageMe = styled.p`
   color: white;

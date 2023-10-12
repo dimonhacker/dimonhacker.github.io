@@ -3,12 +3,13 @@ import {Logo} from "../../components/logo/Logo";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
+import {theme} from "../../styles/Theme";
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper justify={"space-between"} direction={"column"} gap={"48px"}>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper className={"footer"}  justify={"space-between"}  gap={"2em"}>
                     <FlexWrapper direction={"column"} gap={"16px"}>
                         <FlexWrapper gap={"24px"} alignItems={"center"}>
                             <FlexWrapper gap={"8px"}>
@@ -39,6 +40,8 @@ const StyledFooter = styled.div`
   border: white;
   max-width: 1024px;
   margin: 0 auto;
+  border-top: 1px solid ${theme.colors.secondaryTextColor};
+  padding-top: 1em;
 `
 const StyledSpan = styled.p`
   color: white;
@@ -62,11 +65,12 @@ const Descr = styled.p`
   font-weight: 400;
 `
 
-const Media = styled.p`
+const Media = styled.div`
   color: white;
   font-family: Fira Code;
   font-size: 24px;
   font-weight: 500;
+  padding-left: 0.6em;
 `
 const Div = styled.div`
   display: flex;

@@ -43,5 +43,8 @@ export const GlobalStyle = createGlobalStyle`
     .aboutTextWrapper{
       max-width: 100%;
     }
+    .footer{
+      justify-content: center;
+    }
   }
 `
