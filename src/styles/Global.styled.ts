@@ -35,10 +35,13 @@ export const GlobalStyle = createGlobalStyle`
     border:none;
   }
   
-  @media screen and (max-width: 609px){
+  @media  (max-width: 660px){
     .aboutWrapper{
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-content: end;
+    }
+    .aboutTextWrapper{
+      max-width: 100%;
     }
   }
 `

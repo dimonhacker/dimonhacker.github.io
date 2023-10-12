@@ -11,7 +11,9 @@ type FlexWrapperPropsType = {
 
     marginTop?:string;
     marginBottom?:string;
-    maxWidth?: string
+    maxWidth?: string;
+
+    flexGrow?:number;
 }
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   display: flex;
@@ -24,5 +26,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   max-width: ${props => props.maxWidth || ""};
   margin-top: ${props => props.marginTop || ""};
   margin-bottom: ${props => props.marginBottom || ""};
-
+  flex-grow: ${props => props.marginBottom || ""};
 `

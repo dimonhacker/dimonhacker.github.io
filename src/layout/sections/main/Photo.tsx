@@ -19,12 +19,12 @@ export const Photo = () => {
 const StyledPhoto = styled.div`
   content: "";
   display: flex;
-  max-width: 457px;
-  height: 386px;
   position: relative;
-  
+  object-fit: cover;
 `
 const ImageWrapper = styled.div`
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
   &::before {
     position: absolute;
@@ -32,22 +32,27 @@ const ImageWrapper = styled.div`
     top: 85px;
     left: -10px;
     background-image: url(${mainLogo});
+    max-width: 156px;
+    max-height: 156px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    width: 156px;
-    height: 156px;
     z-index: -1;
   }
 
   &::after {
+    object-fit: cover;
     position: absolute;
     content: "";
     display: block;
-    top: 246px;
-    left: 357px;
+    top: 63%;
+    left: 78%;
     background-image: url(${Dots});
     min-width: 84px;
     min-height: 84px;
   }
 `
 const AvatarImage = styled.img`
+  max-width: 100%;
+  max-height: 100%;
 `

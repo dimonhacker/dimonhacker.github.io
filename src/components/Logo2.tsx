@@ -24,10 +24,15 @@ export const Logo2 = () => {
 
 const LogoImg = styled.img.attrs({
     src: `${Img2}`
-})`
+})`  
+    max-width: 100%;
+  max-height: 100%;
+  min-width: 320px;
+  min-height: 480px;
 `
 const StyledLogoDiv = styled.div<StyledAPropsType>`
   position: relative;
+  object-fit: cover;
   &::before {
     content: "";
     position: absolute;

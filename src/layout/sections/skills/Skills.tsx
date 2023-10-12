@@ -16,7 +16,7 @@ export const Skills = () => {
                 <FlexWrapper>
                     <FlexWrapper direction={"column"} >
                         <FlexWrapper justify={"start"} align={"center"} wrap={"no-wrap"}>
-                            <SectionTitle mwidth={"239px"}><ColorSpan>#</ColorSpan>skills</SectionTitle>
+                            <SectionTitle mwidth={"160px"}><ColorSpan>#</ColorSpan>skills</SectionTitle>
                         </FlexWrapper>
                         <FlexWrapper marginTop={"45px;"} className={"wrapper"}>
                             <StyledGrid>

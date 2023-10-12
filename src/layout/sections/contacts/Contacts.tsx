@@ -23,8 +23,8 @@ export const Contacts = () => {
                             don’t hesitate to contact me</P>
                         <MessageBox>
                             <MessageMe>Message me here</MessageMe>
-                            <A href={"#"}><Icon iconId={"email"}></Icon>elias@elias.me</A>
-                            <A href={"#"}><Icon iconId={"telegram"}></Icon>t.me</A>
+                            <A href={"#"}><StyledSpan><Icon iconId={"email"}></Icon>elias@elias.me</StyledSpan></A>
+                            <A href={"#"}><StyledSpan><Icon iconId={"telegram"}></Icon>t.me</StyledSpan></A>
                         </MessageBox>
                     </FlexWrapper>
                 </FlexWrapper>
@@ -33,6 +33,11 @@ export const Contacts = () => {
     );
 };
 
+const StyledSpan = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`
 const P = styled.div`
   display: block;
   color: #ABB2BF;
@@ -53,7 +58,7 @@ const MessageMe = styled.p`
 `
 
 const MessageBox = styled.div`
-  display: inline-flex;
+  display: flex;
   border: 1px solid #ABB2BF;
   flex-direction: column;
   align-items: flex-start;
@@ -69,4 +74,5 @@ const A = styled.a`
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+ 
 `

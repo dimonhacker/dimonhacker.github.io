@@ -12,9 +12,9 @@ export const About = () => {
         <StyledSection id={"about-me"}>
             <Container>
                 <FlexWrapper className={"aboutWrapper"} justify={"space-between"} wrap={"no-wrap"}>
-                    <FlexWrapper maxWidth={"515px"}>
+                    <FlexWrapper className={"aboutTextWrapper"} maxWidth={"50%"}>
                         <FlexWrapper align={"center"} wrap={"no-wrap"}>
-                            <SectionTitle mwidth={"100%"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
+                            <SectionTitle mwidth={"80%"}><ColorSpan>#</ColorSpan>about-me</SectionTitle>
                         </FlexWrapper>
                         <FlexWrapper  marginTop={"25px"} direction={"column"} justify={"space-between"}>
                             <P>Hello, i’m Dmitry!</P>
@@ -30,7 +30,7 @@ export const About = () => {
                         </FlexWrapper>
                         <ReadMore href={"#"}>Read more -&gt;</ReadMore>
                     </FlexWrapper>
-                    <FlexWrapper className={"logoClass"} direction={"row"} maxWidth={"50%"}>
+                    <FlexWrapper className={"logoClass"} maxWidth={"50%"}>
                         <a href={"#"}><Logo2/></a>
                     </FlexWrapper>
                 </FlexWrapper>

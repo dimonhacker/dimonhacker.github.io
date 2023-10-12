@@ -4,8 +4,9 @@ import {Logo} from "../../components/logo/Logo";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {theme} from "../../styles/Theme";
+import {HeaderMenuMobile} from "./headerMenuMobile/HeaderMenuMobile";
 
-const items = ["#home", "#works", "#about-me", "#contacts"]
+const items = ["home", "works", "about-me", "contacts"]
 export const Header = () => {
     return (
         <StyledHeader>
@@ -15,6 +16,7 @@ export const Header = () => {
                     <StyledSpan> Elias</StyledSpan>
                 </FlexWrapper>
                 <HeaderMenu menuItems={items}></HeaderMenu>
+                <HeaderMenuMobile menuItems={items}></HeaderMenuMobile>
             </FlexWrapper>
         </StyledHeader>
     );
@@ -28,8 +30,11 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  //background-color: ${theme.colors.background};
-  //z-index: 1;
+  background-color: ${theme.colors.background};
+  z-index: 1;
+  @media screen{
+    display: none;
+  }
 `
 const StyledSpan = styled.p`
   color: white;

@@ -18,5 +18,5 @@ export const Icon = (props:IconPropsType) => {
 };
 
 const SVG = styled.svg`
-  padding-left: 10px;
+  margin-left: 10px;
 `

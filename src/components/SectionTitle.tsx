@@ -23,7 +23,7 @@ export const SectionTitle = styled.h2<LinePropsType>`
      max-width: ${props => props.mwidth};
      //max-width: calc(100vw - 100%);
      margin-left: calc( 100%);
-     width: 100vw;
+     width: calc(100vw - 100%);
      height: 2px;
      z-index: -1;
     }
