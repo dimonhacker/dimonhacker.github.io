@@ -14,34 +14,40 @@ export const Skills = () => {
         <StyledSection>
             <Container>
                 <FlexWrapper>
-                    <FlexWrapper direction={"column"} >
+                    <FlexWrapper direction={"column"}>
                         <FlexWrapper justify={"start"} align={"center"} wrap={"no-wrap"}>
                             <SectionTitle mwidth={"160px"}><ColorSpan>#</ColorSpan>skills</SectionTitle>
                         </FlexWrapper>
                         <FlexWrapper marginTop={"45px;"} className={"wrapper"}>
                             <StyledGrid>
-                                <FlexWrapper className={"fon"} direction={"column"}>
-                                    <FlexWrapper justify={"space-around"}>
-                                        <Icon iconId={'dots'} width="200" height="200" viewBox="0 0 200 200"/>
-                                        <Icon iconId={'rectangle-24'} width="86" height="86" viewBox="0 0 86 86"/>
-                                    </FlexWrapper>
-                                    <FlexWrapper justify={"space-around"}>
-                                        <Icon iconId={'rect2'} width="156" height="156" viewBox="0 0 156 156"/>
-                                        <Icon iconId={'dots'} width="86" height="86" viewBox="0 0 86 86"/>
-                                        <Icon iconId={'rectangle-23'} width="52" height="52" viewBox="0 0 52 52"/>
-                                    </FlexWrapper>
-                                </FlexWrapper>
-                                <StyledGridSmall className={"skills"}>
-                                    <FlexWrapper  className={"grid-item"} direction={"column"}><Skill  title={"Languages"}
-                                                                             description={"Typescript Lua Python JavaScript"}/></FlexWrapper>
-                                    <FlexWrapper className={"grid-item"} direction={"column"} gap={"16px"}> <Skill  title={"Databases"}
-                                                                                           description={"SqLite PostgreSql Mongo"}/><Skill
-                                         title={"Other"}
-                                        description={"HTML CSS EJS SCSS REST Jinja"}/></FlexWrapper>
-                                    <FlexWrapper className={"grid-item"} gap={"16px"} direction={"column"}><Skill title={"Tools"}
-                                                                                          description={"VSCode Neovim Linux Figma XFCE Arch Git Font Awesome"}/>
+                                <IconWrapper2 className={"fon"}>
+                                    <IconWrapper_4>
+                                    <Icon iconId={'dots'} width="64" height="64" viewBox="0 0 86 86"/>
+                                    </IconWrapper_4>
+                                    <IconWrapper_5>
+                                    <Icon iconId={'rectangle-24'} width="86" height="86" viewBox="0 0 86 86"/>
+                                    </IconWrapper_5>
+                                    <IconWrapper_1><Icon iconId={'rect2'} width="113" height="113"
+                                                         viewBox="0 0 156 156"/></IconWrapper_1>
+                                    <IconWrapper_2><Icon iconId={'dots'} width="63" height="63"
+                                                         viewBox="0 0 86 86"/></IconWrapper_2>
 
-                                        <Skill  title={"Frameworks"}
+                                    <IconWrapper_3><Icon iconId={'rectangle-23'} width="52" height="52"
+                                                         viewBox="0 0 52 52"/></IconWrapper_3>
+                                </IconWrapper2>
+                                <StyledGridSmall className={"skills"}>
+                                    <FlexWrapper className={"grid-item"} direction={"column"}><Skill title={"Languages"}
+                                                                                                     description={"Typescript Lua Python JavaScript"}/></FlexWrapper>
+                                    <FlexWrapper className={"grid-item"} direction={"column"} gap={"16px"}> <Skill
+                                        title={"Databases"}
+                                        description={"SqLite PostgreSql Mongo"}/><Skill
+                                        title={"Other"}
+                                        description={"HTML CSS EJS SCSS REST Jinja"}/></FlexWrapper>
+                                    <FlexWrapper className={"grid-item"} gap={"16px"} direction={"column"}><Skill
+                                        title={"Tools"}
+                                        description={"VSCode Neovim Linux Figma XFCE Arch Git Font Awesome"}/>
+
+                                        <Skill title={"Frameworks"}
                                                description={"React Vue Disnake Discord.js Flask Express.js"}/></FlexWrapper>
 
                                 </StyledGridSmall>
@@ -55,27 +61,59 @@ export const Skills = () => {
         </StyledSection>
     );
 };
+
+const IconWrapper2 = styled.div`
+  position: relative;
+`
+const IconWrapper_1 = styled.div`
+  position: absolute;
+  top: 197px;
+  left: 47px;
+`
+const IconWrapper_2 = styled.div`
+  position: absolute;
+  top: 171px;
+  left: 209px;
+`
+const IconWrapper_3 = styled.div`
+  position: absolute;
+  top: 221px;
+  left: 329px;
+`
+const IconWrapper_4 = styled.div`
+  position: absolute;
+  top: 66px;
+  left: 32px;
+`
+const IconWrapper_5 = styled.div`
+  position: absolute;
+  top: 28px;
+  left: 259px;
+`
 const StyledGrid = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  .skills:first-child{
+
+  .skills:first-child {
     grid-area: 1/2/1/2;
   }
-  @media screen and (max-width: 1023px){
-    .skills:nth-child(2){
+
+  @media screen and (max-width: 1023px) {
+    .skills:nth-child(2) {
       grid-area: 1/2/1/2;
     }
-      .fon{
-        display: none;
-      }
-    
+
+    .fon {
+      display: none;
+    }
+
   }
-  @media screen and (max-width: 609px){
-    grid-template-columns: 1fr;    
+  @media screen and (max-width: 609px) {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
 `
 
 const StyledGridSmall = styled.div`
@@ -83,6 +121,7 @@ const StyledGridSmall = styled.div`
   gap: 1em;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: row;
+
   .grid-item:first-child {
     grid-area: 1/1/1/1
   }
@@ -94,17 +133,19 @@ const StyledGridSmall = styled.div`
   .grid-item:nth-child(3) {
     grid-area: 1/3/1/3
   }
-  @media screen and (max-width: 1023px){
-    .grid-item{
+
+  @media screen and (max-width: 1023px) {
+    .grid-item {
       align-items: center;
     }
   }
 
-  @media screen and (max-width: 609px){
+  @media screen and (max-width: 609px) {
     gap: 20px;
     .grid-item:first-child {
       grid-area: 1/2/1/2
     }
+
     .grid-item:nth-child(2) {
       grid-area: 2/2/2/2
     }
@@ -113,6 +154,6 @@ const StyledGridSmall = styled.div`
       grid-area: 3/2/3/2
     }
   }
- 
+
 
 `

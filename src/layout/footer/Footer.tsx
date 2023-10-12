@@ -45,7 +45,6 @@ const StyledFooter = styled.div`
 `
 const StyledSpan = styled.p`
   color: white;
-  font-family: Fira Code;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -53,14 +52,12 @@ const StyledSpan = styled.p`
 `
 const CopyrightMail = styled.p`
   color: #ABB2BF;
-  font-family: Fira Code;
   font-size: 16px;
   font-weight: 400;
   text-align: center;
 `
 const Descr = styled.p`
   color: white;
-  font-family: Fira Code;
   font-size: 16px;
   font-weight: 400;
 `
@@ -71,10 +68,4 @@ const Media = styled.div`
   font-size: 24px;
   font-weight: 500;
   padding-left: 0.6em;
-`
-const Div = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
 `
