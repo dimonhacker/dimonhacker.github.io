@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.60750a66.css","mappings":"AAAA,WACI,qBAAwB,CACxB,6FAEJ,CAEA,KACI,kBACJ","sources":["App.css"],"sourcesContent":["@font-face {\n    font-family: 'Fira Code';\n    src: local('Fira Code'),\n    url(\"fonts/Fira_Code/FiraCode-VariableFont_wght.ttf\");\n}\n\nbody {\n    background: #282C33;\n}\n"],"names":[],"sourceRoot":""}
