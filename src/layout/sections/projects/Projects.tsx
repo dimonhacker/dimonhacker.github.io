@@ -61,7 +61,6 @@ const Span = styled.div`
 const A = styled.a`
   text-decoration: none;
   background-color: ${theme.colors.background};
-  z-index: 1;
   padding-left: 10px;
   padding-right: 10px;
 `

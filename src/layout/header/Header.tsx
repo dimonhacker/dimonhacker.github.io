@@ -10,14 +10,8 @@ const items = ["home", "works", "about-me", "contacts"]
 export const Header = () => {
     return (
         <StyledHeader>
-            <FlexWrapper justify={"space-between"}>
-                <FlexWrapper gap={"8px"}>
-                    <Logo/>
-                    <StyledSpan> Elias</StyledSpan>
-                </FlexWrapper>
                 <HeaderMenu menuItems={items}></HeaderMenu>
                 <HeaderMenuMobile menuItems={items}></HeaderMenuMobile>
-            </FlexWrapper>
         </StyledHeader>
     );
 };
@@ -32,12 +26,4 @@ const StyledHeader = styled.header`
   right: 0;
   background-color: ${theme.colors.background};
   z-index: 1;
-  @media screen{
-    display: none;
-  }
-`
-const StyledSpan = styled.p`
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
 `

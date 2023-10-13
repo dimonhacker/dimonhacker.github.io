@@ -19,8 +19,8 @@ export const Citation = () => {
 const QuoteDiv = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   align-content: center;
+  justify-content: center;
 `
 const StyledBox = styled.div`
   color: #FFF;

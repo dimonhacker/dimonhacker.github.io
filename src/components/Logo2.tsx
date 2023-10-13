@@ -62,7 +62,6 @@ const StyledWrapper = styled.div`
     position: absolute;
     height: 1px;
     background-color: ${theme.colors.accent};
-    z-index: 10;
   }
 `
 

@@ -1,30 +1,42 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {Logo} from "../../../components/logo/Logo";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 
-export const HeaderMenu = (props: {menuItems: Array<String>}) => {
+export const HeaderMenu = (props: { menuItems: Array<String> }) => {
     return (
-        <StyledHeaderMenu>
-            <ul>
-                {props.menuItems.map((item,index)=>{
-                    return <ListItem key={index}>
-                            <Link href={''+item}>
+        <FlexWrapper justify={"space-between"}>
+            <FlexWrapper gap={"8px"}>
+                <Logo/>
+                <StyledSpan> Elias</StyledSpan>
+            </FlexWrapper>
+            <StyledHeaderMenu>
+                <ul>
+                    {props.menuItems.map((item, index) => {
+                        return <ListItem key={index}>
+                            <Link href={'' + item}>
                                 {item}
                                 <Mask><span>{item}</span></Mask>
                                 {/*<Mask><span>{item}</span></Mask>*/}
                             </Link>
-                    </ListItem>
-                })}
-                <Select id="select">
-                    <Option>EN</Option>
-                    <Option>RU</Option>
-                </Select>
-            </ul>
-        </StyledHeaderMenu>
+                        </ListItem>
+                    })}
+                    <Select id="select">
+                        <Option>EN</Option>
+                        <Option>RU</Option>
+                    </Select>
+                </ul>
+            </StyledHeaderMenu>
+        </FlexWrapper>
     );
 };
-
+const StyledSpan = styled.p`
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+`
 const Select = styled.select`
   color: ${theme.colors.secondaryTextColor};
   font-family: Fira Code;
@@ -37,12 +49,12 @@ const Select = styled.select`
 `
 
 const Option = styled.option`
-background-color: ${theme.colors.background}
+  background-color: ${theme.colors.background}
 `
 const StyledHeaderMenu = styled.nav`
-  ul{
+  ul {
     display: flex;
-    gap:30px;
+    gap: 30px;
     list-style: none;
   }
 `
@@ -57,14 +69,16 @@ const Link = styled.a`
 const Mask = styled.span`
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   display: inline-block;
   height: 100%;
   overflow-y: hidden;
   color: gray;
   z-index: 1;
+
   & + & {
     top: 50%;
+
     span {
       display: inline-block;
       transform: translateY(-50%);
@@ -73,7 +87,7 @@ const Mask = styled.span`
 `
 const ListItem = styled.li`
   position: relative;
-  
+
 
   &::before {
     content: "";
