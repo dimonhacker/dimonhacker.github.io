@@ -28,12 +28,14 @@ export const ProjectItem = (props: ProjectItemPropsType) => {
 const StyledImg = styled.img`
   border: 1px solid ${theme.colors.secondaryTextColor};
   max-width: 330px;
+  width: 100%;
 `
 const StyledSkills = styled.div`
   border: 1px solid ${theme.colors.secondaryTextColor};
   max-width: 330px;
   line-height: 2em;
   padding: 0 8px;
+  width: 100%;
 `
 const StyledDescr= styled.div`
   border: 1px solid #ABB2BF;
@@ -41,6 +43,7 @@ const StyledDescr= styled.div`
   flex-direction: column;
   padding: 16px;
   max-width: 330px;
+  width: 100%;
   gap: 16px;
   align-items: flex-start;
   align-self: stretch;

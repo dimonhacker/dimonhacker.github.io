@@ -40,6 +40,7 @@ export const Main = () => {
 };
 
 const ButtonWrapper = styled.div`
+  margin: 2em 0;
   //width: unset;
 `
 const Btn = styled.button`
