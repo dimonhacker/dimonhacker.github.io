@@ -7,12 +7,14 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const HeaderMenu = (props: { menuItems: Array<String> }) => {
     return (
-        <FlexWrapper justify={"space-between"}>
-            <FlexWrapper gap={"8px"}>
-                <Logo/>
-                <StyledSpan> Elias</StyledSpan>
-            </FlexWrapper>
+
+
             <StyledHeaderMenu>
+                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper gap={"8px"}>
+                    <Logo/>
+                    <StyledSpan> Elias</StyledSpan>
+                </FlexWrapper>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <ListItem key={index}>
@@ -28,8 +30,9 @@ export const HeaderMenu = (props: { menuItems: Array<String> }) => {
                         <Option>RU</Option>
                     </Select>
                 </ul>
+                </FlexWrapper>
             </StyledHeaderMenu>
-        </FlexWrapper>
+
     );
 };
 const StyledSpan = styled.p`
@@ -52,10 +55,14 @@ const Option = styled.option`
   background-color: ${theme.colors.background}
 `
 const StyledHeaderMenu = styled.nav`
+  
   ul {
     display: flex;
     gap: 30px;
     list-style: none;
+  }
+  @media ${theme.media.tablet}{
+    display: none;
   }
 `
 

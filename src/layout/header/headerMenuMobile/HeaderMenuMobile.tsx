@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Logo} from "../../../components/logo/Logo";
@@ -6,45 +6,90 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 
 
 export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () =>{
+        setMenuIsOpen(!menuIsOpen)
+    }
     return (
-
             <StyledHeaderMenu>
-                <StyledButton isOpen={false}>
+                <StyledButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}><span></span>
                 </StyledButton>
-                <FlexWrapper>
-                <FlexWrapper gap={"8px"}>
-                <Logo/>
-                <StyledSpan2> Elias</StyledSpan2>
-            </FlexWrapper>
-                <HeaderMenuPopup isOpen={false}>
+                    <FlexWrapper gap={"8px"}>
+                        <Logo/>
+                        <StyledSpan2> Elias</StyledSpan2>
+                    </FlexWrapper>
+                    <HeaderMenuPopup isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
 
-                    <ul>
-                        {props.menuItems.map((item, index) => {
-                            return <ListItem key={index}>
-                                <Link href={'' + item}>
-                                    <StyledSpan>#</StyledSpan>{item}
-                                    <Mask><StyledSpan>#</StyledSpan><span>{item}</span></Mask>
-                                    {/*<Mask><span>{item}</span></Mask>*/}
-                                </Link>
-                            </ListItem>
-                        })}
-                        <Select id="select">
-                            <Option>EN</Option>
-                            <Option>RU</Option>
-                        </Select>
-                    </ul>
-                </HeaderMenuPopup>
-                </FlexWrapper>
+                        <ul>
+                            {props.menuItems.map((item, index) => {
+                                return <ListItem key={index}>
+                                    <Link href={'#' + item}>
+                                        <StyledSpan>#</StyledSpan>{item}
+                                        <Mask><StyledSpan>#</StyledSpan><span>{item}</span></Mask>
+                                    </Link>
+                                </ListItem>
+                            })}
+                            <Select id="select">
+                                <Option>EN</Option>
+                                <Option>RU</Option>
+                            </Select>
+                        </ul>
+                    </HeaderMenuPopup>
             </StyledHeaderMenu>
     );
 };
 
 const StyledButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  right: -50%;
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
+  width: 50px;
+  height: 50px;
+  top: 40px;
+  right: 30px;
+  z-index: 1000;
 
-  `}
+  display: none;
+  @media ${theme.media.tablet} {
+    display: block;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: ${theme.colors.white};
+    position: absolute;
+    left: 40px;
+    bottom: 50px;
+
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+      background-color: rgba(255, 255, 255, 0);
+    `}
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: ${theme.colors.white};
+      position: absolute;
+      transform: translateY(-10px);
+      ${props => props.isOpen && css<{ isOpen: boolean }>`
+        transform: rotate(-45deg) translateY(0);
+      `}
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: ${theme.colors.white};
+      position: absolute;
+      transform: translateY(10px);
+      ${props => props.isOpen && css<{ isOpen: boolean }>`
+        transform: rotate(45deg) translateY(0);
+      `}
+    }
+  }
 `
 const HeaderMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -55,12 +100,20 @@ const HeaderMenuPopup = styled.div<{ isOpen: boolean }>`
   background-color: ${theme.colors.background};
   z-index: 999;
   display: none;
+  
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
-    display: flex;
+    @media ${theme.media.tablet} {
+      display: block;
+    }
   `}
-  span {
-
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    margin-top: 95px;
+    margin-left: 16px;
   }
 `
 const StyledSpan2 = styled.span`
@@ -90,18 +143,11 @@ const Option = styled.option`
   width: 100%;
 `
 const StyledHeaderMenu = styled.nav`
-  margin-top: 4em;
-display: none;
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    list-style: none;
+  display: none;
+  @media ${theme.media.tablet} {
+    display: block;
   }
 
-  @media not screen {
-    //display: none;
-  }
 `
 
 
