@@ -18,7 +18,7 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
                         <Logo/>
                         <StyledSpan2> Elias</StyledSpan2>
                     </FlexWrapper>
-                    <HeaderMenuPopup isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
+                    <HeaderMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen((false))}}>
 
                         <ul>
                             {props.menuItems.map((item, index) => {

@@ -18,7 +18,7 @@ export const HeaderMenu = (props: { menuItems: Array<String> }) => {
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <ListItem key={index}>
-                            <Link href={'' + item}>
+                            <Link href={'#' + item}>
                                 {item}
                                 <Mask><span>{item}</span></Mask>
                                 {/*<Mask><span>{item}</span></Mask>*/}
