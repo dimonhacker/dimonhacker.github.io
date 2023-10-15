@@ -23,9 +23,9 @@ export const Footer = () => {
                     <FlexWrapper direction={"column"} gap={"12px"}>
                         <Media>Media</Media>
                         <FlexWrapper>
-                            <a href={"#"}><Icon iconId={"email"}></Icon></a>
-                            <a href={"#"}><Icon iconId={"telegram"}></Icon></a>
-                            <a href={"#"}><Icon iconId={"github"}></Icon></a>
+                            <a href={"mailto:dimon-hacker@yandex.ru"}><Icon iconId={"email"}></Icon></a>
+                            <a href={"https://t.me/dimon_hacker"}><Icon iconId={"telegram"}></Icon></a>
+                            <a href={"https://github.com/dimonhacker"}><Icon iconId={"github"}></Icon></a>
                         </FlexWrapper>
                     </FlexWrapper>
                 </FlexWrapper>

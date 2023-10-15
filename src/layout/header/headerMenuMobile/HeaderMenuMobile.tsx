@@ -41,9 +41,9 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
                             </Select>
                         </StyledMenuList>
                         <FlexWrapper justify={"center"}>
-                            <a href={"#"}><Icon iconId={"email"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
-                            <a href={"#"}><Icon iconId={"telegram"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
-                            <a href={"#"}><Icon iconId={"github"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
+                            <a href={"mailto:dimon-hacker@yandex.ru"}><Icon iconId={"email"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
+                            <a href={"https://t.me/dimon_hacker"}><Icon iconId={"telegram"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
+                            <a href={"https://github.com/dimonhacker"}><Icon iconId={"github"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
                         </FlexWrapper>
                     </HeaderMenuPopup>
             </StyledHeaderMenu>
