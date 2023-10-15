@@ -19,12 +19,13 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
                     <Logo/>
                     <StyledSpan2> Elias</StyledSpan2>
                 </LogoWrapper>
-                    <HeaderMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen((false))}}>
+                    <HeaderMenuPopup isOpen={menuIsOpen} >
                         <LogoWrapperMenu>
                             <Logo/>
                             <StyledSpan2> Elias</StyledSpan2>
                         </LogoWrapperMenu>
-                        <ul>
+                        <StyledMenuList>
+                            <ul>
                             {props.menuItems.map((item, index) => {
                                 return <ListItem key={index}>
                                     <NavLink to={item.toString()} smooth={true} activeClass={"active"} spy={true} offset={1} onClick={()=>{setMenuIsOpen((false))}}>
@@ -32,11 +33,12 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
                                     </NavLink>
                                 </ListItem>
                             })}
+                            </ul>
                             <Select id="select">
                                 <Option>EN</Option>
                                 <Option>RU</Option>
                             </Select>
-                        </ul>
+                        </StyledMenuList>
                     </HeaderMenuPopup>
             </StyledHeaderMenu>
     );
@@ -52,9 +54,7 @@ const LogoWrapper = styled.div`
 const LogoWrapperMenu = styled.div`
   margin-top: 16px;
   margin-left: 16px;
-    display: block;
-    gap: 8px;
-  
+
 `
 const StyledButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -114,27 +114,26 @@ const HeaderMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: auto;
   background-color: ${theme.colors.background};
   z-index: 999;
   display: block;
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   transition: 1s ease-in-out;
-
-
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     transform: translateY(0);
-    // @media ${theme.media.tablet} {
-    //   display: flex;
-    // }
   `
 }
+  
+`
+const StyledMenuList = styled.div`
+  padding-left: 16px;
   ul {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     list-style: none;
-    margin-top: 80px;
-    margin-left: 16px;
+    gap: 32px;
+    padding-top: 80px;
   }
 `
 const StyledSpan2 = styled.span`
@@ -157,6 +156,7 @@ const Select = styled.select`
   background-color: transparent;
   border: 0;
   width: 2em;
+  margin-top: 32px;
 `
 
 const Option = styled.option`
@@ -164,8 +164,7 @@ const Option = styled.option`
   width: 100%;
 `
 const StyledHeaderMenu = styled.nav`
-  margin-left: 16px;
-  margin-top: 16px;
+  margin: 16px;
 `
 
 const NavLink = styled(Link)`
