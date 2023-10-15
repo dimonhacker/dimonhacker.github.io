@@ -4,6 +4,7 @@ import {theme} from "../../../styles/Theme";
 import {Logo} from "../../../components/logo/Logo";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Link} from "react-scroll";
+import {Icon} from "../../../components/icon/Icon";
 
 
 export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
@@ -39,6 +40,11 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
                                 <Option>RU</Option>
                             </Select>
                         </StyledMenuList>
+                        <FlexWrapper justify={"center"}>
+                            <a href={"#"}><Icon iconId={"email"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
+                            <a href={"#"}><Icon iconId={"telegram"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
+                            <a href={"#"}><Icon iconId={"github"} width={"64px"} height={"64px"} viewBox={"0 0 48 48"}></Icon></a>
+                        </FlexWrapper>
                     </HeaderMenuPopup>
             </StyledHeaderMenu>
     );
@@ -124,7 +130,6 @@ const HeaderMenuPopup = styled.div<{ isOpen: boolean }>`
     transform: translateY(0);
   `
 }
-  
 `
 const StyledMenuList = styled.div`
   padding-left: 16px;
@@ -135,6 +140,7 @@ const StyledMenuList = styled.div`
     gap: 32px;
     padding-top: 80px;
   }
+  margin-bottom: 32px;
 `
 const StyledSpan2 = styled.span`
   color: white;
