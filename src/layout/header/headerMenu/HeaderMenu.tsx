@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Logo} from "../../../components/logo/Logo";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Link} from "react-scroll";
 
 
 export const HeaderMenu = (props: { menuItems: Array<String> }) => {
@@ -10,19 +11,19 @@ export const HeaderMenu = (props: { menuItems: Array<String> }) => {
 
 
             <StyledHeaderMenu>
-                <FlexWrapper justify={"space-between"}>
-                <FlexWrapper gap={"8px"}>
-                    <Logo/>
-                    <StyledSpan> Elias</StyledSpan>
-                </FlexWrapper>
+                <FlexWrapper justify={"space-between"} align={"start"}>
+                    <LogoWrapper>
+                        <Logo/>
+                        <StyledSpanHeader> Elias</StyledSpanHeader>
+                    </LogoWrapper>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <ListItem key={index}>
-                            <Link href={'#' + item}>
-                                {item}
-                                <Mask><span>{item}</span></Mask>
+                            <NavLink to={item.toString()} smooth={true} activeClass={"active"} spy={true} offset={10}>
+                                <span>#</span>{item}
+                                <Mask><StyledSpanMenu>#</StyledSpanMenu><span>{item}</span></Mask>
                                 {/*<Mask><span>{item}</span></Mask>*/}
-                            </Link>
+                            </NavLink>
                         </ListItem>
                     })}
                     <Select id="select">
@@ -35,10 +36,23 @@ export const HeaderMenu = (props: { menuItems: Array<String> }) => {
 
     );
 };
-const StyledSpan = styled.p`
+
+const LogoWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+  @media ${theme.media.tablet} {
+    display: none;    
+  }
+  `
+const StyledSpanHeader = styled.p`
   color: white;
   font-size: 16px;
   font-weight: 700;
+`
+const StyledSpanMenu = styled.span`
+  color: ${theme.colors.accent};
+  font-size: 16px;
+  font-weight: 500;
 `
 const Select = styled.select`
   color: ${theme.colors.secondaryTextColor};
@@ -55,7 +69,7 @@ const Option = styled.option`
   background-color: ${theme.colors.background}
 `
 const StyledHeaderMenu = styled.nav`
-  
+  padding: 32px 0px 8px 0px;
   ul {
     display: flex;
     gap: 30px;
@@ -65,14 +79,6 @@ const StyledHeaderMenu = styled.nav`
     display: none;
   }
 `
-
-
-const Link = styled.a`
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-  color: transparent;
-`
 const Mask = styled.span`
   position: absolute;
   top: 0;
@@ -81,21 +87,24 @@ const Mask = styled.span`
   height: 100%;
   overflow-y: hidden;
   color: gray;
-  z-index: 1;
-
+  transition: .1s ease-in-out;
   & + & {
     top: 50%;
-
-    span {
+    
+    span:nth-child(2) {
       display: inline-block;
       transform: translateY(-50%);
     }
   }
 `
-const ListItem = styled.li`
-  position: relative;
 
-
+const NavLink = styled(Link)`
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: transparent;
+  cursor: pointer;
+  transition: .1s ease-in-out;
   &::before {
     content: "";
     display: inline-block;
@@ -108,18 +117,21 @@ const ListItem = styled.li`
     transform: scale(0);
   }
 
-  &:hover {
+  &:hover, &.active {
     &::before {
       transform: scale(1);
+      
     }
 
     ${Mask} {
       transform: skewX(12deg);
       color: white;
-        // & + ${Mask}{
-      //   transform: skewX(12deg) ;
-      // }
     }
 
   }
+`
+
+const ListItem = styled.li`
+  position: relative;
+
 `

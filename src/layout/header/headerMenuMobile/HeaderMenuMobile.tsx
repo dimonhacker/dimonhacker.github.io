@@ -3,6 +3,7 @@ import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Logo} from "../../../components/logo/Logo";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Link} from "react-scroll";
 
 
 export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
@@ -14,19 +15,21 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
             <StyledHeaderMenu>
                 <StyledButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}><span></span>
                 </StyledButton>
-                    <FlexWrapper gap={"8px"}>
-                        <Logo/>
-                        <StyledSpan2> Elias</StyledSpan2>
-                    </FlexWrapper>
+                <LogoWrapper>
+                    <Logo/>
+                    <StyledSpan2> Elias</StyledSpan2>
+                </LogoWrapper>
                     <HeaderMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen((false))}}>
-
+                        <LogoWrapperMenu>
+                            <Logo/>
+                            <StyledSpan2> Elias</StyledSpan2>
+                        </LogoWrapperMenu>
                         <ul>
                             {props.menuItems.map((item, index) => {
                                 return <ListItem key={index}>
-                                    <Link href={'#' + item}>
+                                    <NavLink to={item.toString()} smooth={true} activeClass={"active"} spy={true} offset={1} onClick={()=>{setMenuIsOpen((false))}}>
                                         <StyledSpan>#</StyledSpan>{item}
-                                        <Mask><StyledSpan>#</StyledSpan><span>{item}</span></Mask>
-                                    </Link>
+                                    </NavLink>
                                 </ListItem>
                             })}
                             <Select id="select">
@@ -39,12 +42,26 @@ export const HeaderMenuMobile = (props: { menuItems: Array<String> }) => {
     );
 };
 
+const LogoWrapper = styled.div`
+  display: none;
+  @media ${theme.media.tablet} {
+    display: flex;
+    gap: 8px;
+  }
+`
+const LogoWrapperMenu = styled.div`
+  margin-top: 16px;
+  margin-left: 16px;
+    display: block;
+    gap: 8px;
+  
+`
 const StyledButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  width: 50px;
-  height: 50px;
-  top: 40px;
-  right: 30px;
+  width: 24px;
+  height: 24px;
+  top: 56px;
+  right: 56px;
   z-index: 1000;
 
   display: none;
@@ -99,20 +116,24 @@ const HeaderMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   background-color: ${theme.colors.background};
   z-index: 999;
-  display: none;
-  
+  display: block;
+  transform: translateY(-100%);
+  transition: 1s ease-in-out;
+
 
   ${props => props.isOpen && css<{ isOpen: boolean }>`
-    @media ${theme.media.tablet} {
-      display: block;
-    }
-  `}
+    transform: translateY(0);
+    // @media ${theme.media.tablet} {
+    //   display: flex;
+    // }
+  `
+}
   ul {
     display: flex;
     flex-direction: column;
     gap: 30px;
     list-style: none;
-    margin-top: 95px;
+    margin-top: 80px;
     margin-left: 16px;
   }
 `
@@ -143,69 +164,22 @@ const Option = styled.option`
   width: 100%;
 `
 const StyledHeaderMenu = styled.nav`
-  display: none;
-  @media ${theme.media.tablet} {
-    display: block;
-  }
-
+  margin-left: 16px;
+  margin-top: 16px;
 `
 
-
-const Link = styled.a`
+const NavLink = styled(Link)`
   color: var(--gray, #ABB2BF);
   font-family: Fira Code, sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-`
-const Mask = styled.span`
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  height: 100%;
-  overflow-y: hidden;
-  color: gray;
-  z-index: 1;
 
-  & + & {
-    top: 50%;
-
-    span {
-      display: inline-block;
-      transform: translateY(-50%);
-    }
+  &:hover, &.active {
+    color: white;
   }
 `
 const ListItem = styled.li`
   position: relative;
-
-
-  &::before {
-    content: "";
-    display: inline-block;
-    height: 3px;
-    position: absolute;
-    top: 50%;
-    left: -10px;
-    right: -10px;
-    z-index: 1;
-    transform: scale(0);
-  }
-
-  &:hover {
-    &::before {
-      transform: scale(1);
-    }
-
-    ${Mask} {
-      transform: skewX(12deg);
-      color: white;
-        // & + ${Mask}{
-      //   transform: skewX(12deg) ;
-      // }
-    }
-
-  }
 `

@@ -17,7 +17,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  padding: 32px 0px 8px 0px;
+  //padding: 32px 0px 8px 0px;
   max-width: 1024px;
   margin: 0 auto;
   position: fixed;
