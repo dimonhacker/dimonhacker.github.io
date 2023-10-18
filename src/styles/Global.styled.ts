@@ -46,5 +46,8 @@ export const GlobalStyle = createGlobalStyle`
     .footer{
       justify-content: center;
     }
+    .media{
+      align-items: center;
+    }
   }
 `

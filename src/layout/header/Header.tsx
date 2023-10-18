@@ -6,7 +6,7 @@ import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {theme} from "../../styles/Theme";
 import {HeaderMenuMobile} from "./headerMenuMobile/HeaderMenuMobile";
 
-const items = ["home", "works", "about-me", "contacts"]
+const items = ["home", "works","skills", "about-me", "contacts"]
 export const Header = () => {
     return (
         <StyledHeader>

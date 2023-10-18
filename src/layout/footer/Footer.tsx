@@ -20,7 +20,7 @@ export const Footer = () => {
                         </FlexWrapper>
                         <Descr>Web designer and front-end developer</Descr>
                     </FlexWrapper>
-                    <FlexWrapper direction={"column"} gap={"12px"}>
+                    <FlexWrapper direction={"column"} gap={"12px"} className={"media"}>
                         <Media>Media</Media>
                         <FlexWrapper>
                             <a href={"mailto:dimon-hacker@yandex.ru"}><Icon iconId={"email"}></Icon></a>
